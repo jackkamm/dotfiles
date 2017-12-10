@@ -1,0 +1,6 @@
+#!/bin/bash -i
+# like dmenu_run, but with aliases from interactive bash shell
+# based on
+# https://www.reddit.com/r/i3wm/comments/5oheyl/comment/dcma37l
+
+compgen -ac | sort -u | dmenu "$@" | /bin/bash -i

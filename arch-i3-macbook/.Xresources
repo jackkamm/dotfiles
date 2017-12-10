@@ -1,0 +1,5 @@
+#include ".Xresources.d/hidpi"
+#include ".Xresources.d/urxvt"
+
+#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-gruvbox-light-soft-256.Xresources"
+!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-atelier-plateau-light-256.Xresources"
