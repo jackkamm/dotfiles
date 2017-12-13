@@ -88,17 +88,24 @@ for_window [class="Evince"] border normal
 #bindsym $mod+shift+m exec source $HOME/.screenlayout/low-res.sh
 
 # detect and configure external monitor
-bindsym $mod+m exec configure_screens.py
+bindsym $mod+m exec autoxrandr
 bindsym $mod+Shift+m exec xrandr --output eDP1 --mode 1280x800
 
 # start a terminal
 #bindsym $mod+Return exec urxvt -e zsh -c "tmux -q has-session && exec tmux attach-session -d || exec tmux new-session -n$USER -s$USER@$HOST"
-bindsym $mod+Shift+Return exec urxvt
 #bindsym $mod+Return exec urxvt -e zsh -c "tmux new-session -As main"
-bindsym $mod+Return exec urxvt -e zsh -c "tmux new-session"
+#bindsym $mod+Return exec urxvt -e zsh -c "tmux new-session"
+bindsym $mod+Shift+Return exec urxvt
+bindsym $mod+Return exec urxvt -e "tmux"
+#bindsym $mod+Return exec termite -e 'zsh -c "tmux new-session"'
+#bindsym $mod+Return exec termite -e "tmux"
+#bindsym $mod+Shift+Return exec termite
 
 # kill focused window
 bindsym $mod+Shift+q kill
+
+# reload urxvt background/font
+bindsym $mod+u exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec rofi -show run

@@ -1,4 +1,4 @@
-DOTFILES = common zsh arch-i3-macbook
+DOTFILES = common zsh arch-i3-hidpi
 .PHONY: all clean $(DOTFILES)
 
 all: $(DOTFILES)
