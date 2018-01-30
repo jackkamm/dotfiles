@@ -393,6 +393,27 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   ;;; need to set this before shell layer is loaded
   ;;; (doesn't work in private layer pre-init-shell)
   ;(setq shell-file-name "/bin/bash")
+
+  ;; https://github.com/syl20bnr/spacemacs/issues/8770
+  ;; scale all images by 2
+  (defun create-image-2x (oldfun file-or-data &optional type data-p &rest props)
+    (let ((original (apply oldfun (append (list file-or-data type data-p) props))))
+      ;;(if (memq type '(xpm xbm pbm imagemagick)) ;not sure about xbm,pbm,imagemagick
+      (if (memq type '(xpm xbm pbm))
+          original
+        (let* ((width-height (image-size original t))
+               (width (car width-height))
+               (height (cdr width-height))
+               (width-2x (* 2 width))
+               (height-2x (* 2 height))
+               (newprops (plist-put props :format type))
+               (newprops (plist-put newprops :width width-2x))
+               (newprops (plist-put newprops :height height-2x))
+               (newargs (append (list file-or-data 'imagemagick data-p) newprops)))
+          (apply oldfun newargs)))))
+
+  (if (>= (default-font-height) 28)
+      (advice-add 'create-image :around #'create-image-2x))
   )
 
 (defun dotspacemacs/user-config ()
