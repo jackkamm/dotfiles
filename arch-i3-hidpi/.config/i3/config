@@ -33,7 +33,7 @@ exec --no-startup-id blueberry-tray
 ## redshift
 exec --no-startup-id redshift-gtk
 
-exec --no-startup-id workrave
+#exec --no-startup-id workrave
 
 ## caffeine turns off screen sleep when watching fullscreen video
 exec --no-startup-id caffeine
@@ -112,7 +112,8 @@ bindsym $mod+u exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 #bindsym $mod+d exec dmenu_run
 #bindsym $mod+d exec dmenu_run_alias
 #bindsym $mod+d exec "bash -ic 'compgen -ac' | rofi -dmenu | bash -i"
-bindsym $mod+d exec "bash -ic 'compgen -ac' | sort -u | dmenu | bash -i"
+#bindsym $mod+d exec "bash -ic 'compgen -ac' | sort -u | dmenu | bash -i"
+bindsym $mod+d exec "bash -ic 'compgen -ac' | dmenu | bash -i"
 #bindsym $mod+d exec dmenu_extended_run
 
 bindsym $mod+Shift+comma move workspace to output left
@@ -255,6 +256,9 @@ bindsym XF86MonBrightnessDown exec "xbacklight -dec 10 && volnoti-show -s /usr/s
 
 focus_follows_mouse no
 
+# TODO fixme, not a great solution for multiple monitors
+# prevent floating window being larger than screen...
+floating_maximum_size 2560 x 1550
 
 # Disable mouse scroll in title bar
 # https://faq.i3wm.org/question/6326/how-to-disable-mouse-scroll-in-titlebar.1.html
