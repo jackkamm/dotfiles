@@ -1,5 +1,5 @@
-export PATH=$HOME/bin:$HOME/perl5/bin:$PATH
-export PYTHONPATH=$HOME/pythonpath:$PYTHONPATH
+export PATH=$HOME/bin:$HOME/perl5/bin:$PATH:$HOME/miniconda3/bin
+
 export EDITOR=vim
 
 # edit by cpan configuration
