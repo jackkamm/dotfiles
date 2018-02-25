@@ -9,3 +9,5 @@
 !#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-oceanicnext-256.Xresources"
 !#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-unikitty-dark-256.Xresources"
 !#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-atelier-plateau-light-256.Xresources"
+
+rofi.dpi: 192
