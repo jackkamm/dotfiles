@@ -2,6 +2,14 @@ if [ -f $HOME/.bash_aliases ]; then
     . $HOME/.bash_aliases
 fi
 
+if [ -d $HOME/miniconda3 ]; then
+	. $HOME/miniconda3/etc/profile.d/conda.sh
+fi
+
+if [ -d $HOME/anaconda3 ]; then
+	. $HOME/anaconda3/etc/profile.d/conda.sh
+fi
+
 ## fixes broken term-send-backspace in emacs term in OSX
 if [[ -n $INSIDE_EMACS && $(uname) == 'Darwin' ]]; then
     stty ek
@@ -137,4 +145,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-. /home/jack/miniconda3/etc/profile.d/conda.sh

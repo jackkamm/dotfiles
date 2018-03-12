@@ -527,7 +527,8 @@ Put your configuration code here, except for variables that should be set
 before packages are loaded."
   ;; keeps dotspacemacs clean for git
   (setq custom-file "~/.spacemacs-custom.el")
-  (load-file custom-file)
+  (if (file-exists-p custom-file)
+      (load-file custom-file))
 
   ;; cask files
   ;(require 'cask "/usr/share/cask/cask.el")
