@@ -1,4 +1,5 @@
-export PATH=$HOME/bin:$HOME/perl5/bin:$PATH:$HOME/miniconda3/bin
+export PATH=$HOME/bin:$HOME/perl5/bin:$PATH
+#export PATH=$HOME/bin:$HOME/perl5/bin:$PATH:$HOME/miniconda3/bin
 
 export EDITOR=vim
 
