@@ -14,15 +14,19 @@ fi
 alias ls='ls --color=auto'
 
 # set prompt; try to use git-prompt
+BLACK="\e[30m"
 RED="\e[31m"
-YELLOW="\e[33m"
 GREEN="\e[32m"
-CYAN="\[\e[36m\]"
-RESET="\[\e[m\]"
-PS1=$RED'\u@\h'$YELLOW':\w'$RESET
+YELLOW="\e[33m"
+BLUE="\e[34m"
+CYAN="\e[36m"
+MAGENTA="\e[35m"
+GRAY="\e[37m"
+WHITE="\e[39m" # default
+PS1=$RED'\u@\h'$YELLOW':\w'$WHITE
 if [ -r /usr/share/git/completion/git-prompt.sh ]; then
     . /usr/share/git/completion/git-prompt.sh
-    PS1=$PS1$GREEN'$(__git_ps1 ":%s")'$RESET
+    PS1=$PS1$GREEN'$(__git_ps1 ":%s")'$WHITE
 fi
 PS1="["$PS1"]\$ "
 
