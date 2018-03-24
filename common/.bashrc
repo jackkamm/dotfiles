@@ -26,6 +26,7 @@ WHITE="\e[39m" # default
 PS1=$RED'\u@\h'$YELLOW':\w'$WHITE
 if [ -r /usr/share/git/completion/git-prompt.sh ]; then
     . /usr/share/git/completion/git-prompt.sh
+    export GIT_PS1_SHOWDIRTYSTATE=1
     PS1=$PS1$GREEN'$(__git_ps1 ":%s")'$WHITE
 fi
 PS1="["$PS1"]\$ "
