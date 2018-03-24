@@ -8,6 +8,9 @@
 # local machine-specific configuration
 [[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
 
+export PATH=$HOME/bin:$HOME/perl5/bin:$PATH
+export EDITOR=vim
+
 alias ls='ls --color=auto'
 
 # set prompt; try to use git-prompt
@@ -18,7 +21,7 @@ else
     PS1='[\u@\h \W]\$ '
 fi
 
-## Conda
+## conda
 if [ -d $HOME/miniconda3 ];
 then
 	  . $HOME/miniconda3/etc/profile.d/conda.sh
