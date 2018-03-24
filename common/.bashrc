@@ -5,21 +5,26 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# local machine-specific configuration
-[[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
-
-export PATH=$HOME/bin:$HOME/perl5/bin:$PATH
-export EDITOR=vim
+if [ -d ~/.bashrc.d ]; then
+    for profile in ~/.bashrc.d/*.sh; do
+        . $profile
+    done
+fi
 
 alias ls='ls --color=auto'
 
 # set prompt; try to use git-prompt
+RED="\e[31m"
+YELLOW="\e[33m"
+GREEN="\e[32m"
+CYAN="\[\e[36m\]"
+RESET="\[\e[m\]"
+PS1=$RED'\u@\h'$YELLOW':\w'$RESET
 if [ -r /usr/share/git/completion/git-prompt.sh ]; then
     . /usr/share/git/completion/git-prompt.sh
-    PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
-else
-    PS1='[\u@\h \W]\$ '
+    PS1=$PS1$GREEN'$(__git_ps1 ":%s")'$RESET
 fi
+PS1="["$PS1"]\$ "
 
 ## conda
 if [ -d $HOME/miniconda3 ];
