@@ -1,0 +1,8 @@
+# -*- mode: sh -*-
+
+set show-all-if-ambiguous on
+set completion-ignore-case on
+
+TAB:menu-complete
+# Shift-TAB
+"\e[Z": menu-complete-backward

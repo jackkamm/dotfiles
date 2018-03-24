@@ -1,7 +1,5 @@
 DOTFILES = common zsh arch-i3-hidpi
-.PHONY: all clean $(DOTFILES)
-
-all: $(DOTFILES)
+.PHONY: clean $(DOTFILES)
 
 $(DOTFILES): %:
 	stow -R -t $(HOME) $*
