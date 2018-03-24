@@ -6,7 +6,7 @@
 [[ $- != *i* ]] && return
 
 # local machine-specific configuration
-[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.bashrc.local ]] && . ~/.bashrc.local
 
 alias ls='ls --color=auto'
 
