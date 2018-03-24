@@ -5,8 +5,8 @@ RefuseManualStop=no
 
 [Timer]
 Persistent=false
-OnStartupSec=1min
-OnUnitActiveSec= 5min
+OnStartupSec=30sec
+OnUnitActiveSec=3min
 Unit=checkbatt.service
 
 [Install]
