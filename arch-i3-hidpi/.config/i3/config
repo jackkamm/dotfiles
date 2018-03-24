@@ -108,13 +108,8 @@ bindsym $mod+Shift+q kill
 bindsym $mod+u exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec rofi -show run
-#bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec dmenu_run_alias
-#bindsym $mod+d exec "bash -ic 'compgen -ac' | rofi -dmenu | bash -i"
-#bindsym $mod+d exec "bash -ic 'compgen -ac' | sort -u | dmenu | bash -i"
+# use interactive shell for aliases
 bindsym $mod+d exec "bash -ic 'compgen -ac' | dmenu | bash -i"
-#bindsym $mod+d exec dmenu_extended_run
 
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right

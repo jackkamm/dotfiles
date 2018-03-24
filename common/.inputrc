@@ -3,8 +3,6 @@
 set show-all-if-ambiguous on
 set completion-ignore-case on
 
-#TAB:menu-complete
-\C-j:menu-complete
-# Shift-TAB
-#"\e[Z": menu-complete-backward
-\C-k: menu-complete-backward
+# would prefer \C-j but it breaks stuff because ^J=newline
+TAB: menu-complete
+"\e[Z": menu-complete-backward
