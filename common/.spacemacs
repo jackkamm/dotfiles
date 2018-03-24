@@ -493,6 +493,9 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
                                      vc-ignore-dir-regexp
                                      tramp-file-name-regexp))
 
+  ;; shutup annoying exec-path-from-shell message
+  (setq exec-path-from-shell-check-startup-files nil)
+
   ;;; need to set this before shell layer is loaded
   ;;; (doesn't work in private layer pre-init-shell)
   ;(setq shell-file-name "/bin/bash")
