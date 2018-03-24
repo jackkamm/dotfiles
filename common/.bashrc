@@ -23,11 +23,11 @@ CYAN="\e[36m"
 MAGENTA="\e[35m"
 GRAY="\e[37m"
 WHITE="\e[39m" # default
-PS1=$RED'\u@\h'$YELLOW':\w'$WHITE
+PS1=$BLUE'\u@\h'$MAGENTA':\w'$WHITE
 if [ -r /usr/share/git/completion/git-prompt.sh ]; then
     . /usr/share/git/completion/git-prompt.sh
     export GIT_PS1_SHOWDIRTYSTATE=1
-    PS1=$PS1$GREEN'$(__git_ps1 ":%s")'$WHITE
+    PS1=$PS1$CYAN'$(__git_ps1 ":%s")'$WHITE
 fi
 PS1="["$PS1"]\$ "
 
