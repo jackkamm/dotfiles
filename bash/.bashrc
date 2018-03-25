@@ -5,13 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -d ~/.bashrc.d ]; then
-    for profile in ~/.bashrc.d/*.sh; do
-        . $profile
+if [ -d ~/.shrc.d ]; then
+    for profile in $(ls ~/.shrc.d/); do
+        . ~/.shrc.d/$profile
     done
 fi
-
-alias ls='ls --color=auto'
 
 # set prompt; try to use git-prompt
 BLACK="\[\e[30m\]"

@@ -1,10 +1,8 @@
-if [ -d ~/.bashrc.d ]; then
-    for profile in ~/.bashrc.d/*.sh; do
-        . $profile
+if [ -d ~/.shrc.d ]; then
+    for profile in $(ls ~/.shrc.d/); do
+        . ~/.shrc.d/$profile
     done
 fi
-
-alias ls='ls --color=auto'
 
 # git prompt, see "man zshcontrib", /vcs_info
 setopt PROMPT_SUBST

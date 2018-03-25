@@ -3,12 +3,8 @@ if [ -n "$TMUX" ]; then
     return
 fi
 
-export EDITOR=vim
-
 if [ -d ~/.profile.d ]; then
-    for profile in ~/.profile.d/*.sh; do
-        . $profile
+    for profile in $(ls ~/.profile.d/); do
+        . ~/.profile.d/$profile
     done
 fi
-
-export PATH=$HOME/bin:$PATH
