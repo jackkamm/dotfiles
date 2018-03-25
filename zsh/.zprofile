@@ -1,3 +1,8 @@
+if [ -n "$TMUX" ]; then
+    # avoid adding to PATH twice
+    return
+fi
+
 export EDITOR=vim
 
 if [ -d ~/.profile.d ]; then
