@@ -1,4 +1,4 @@
-DOTFILES = common zsh arch-i3-hidpi
+DOTFILES = common zsh arch-i3-hidpi bash
 .PHONY: clean $(DOTFILES)
 
 $(DOTFILES): %:
