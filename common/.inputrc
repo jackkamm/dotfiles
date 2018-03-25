@@ -2,7 +2,7 @@
 
 set show-all-if-ambiguous on
 set completion-ignore-case on
+set menu-complete-display-prefix on
 
-# would prefer \C-j but it breaks stuff because ^J=newline
 TAB: menu-complete
 "\e[Z": menu-complete-backward
