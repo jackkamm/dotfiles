@@ -4,21 +4,12 @@ if [ -d ~/.shrc.d ]; then
     done
 fi
 
-# git prompt, see "man zshcontrib", /vcs_info
+# prompt+git, see "man zshcontrib", /vcs_info
 setopt PROMPT_SUBST
-
 autoload -Uz vcs_info
-
-zstyle ':vcs_info:*' actionformats \
-       '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{3}|%F{1}%a%F{5}]%f '
-#zstyle ':vcs_info:*' formats       \
-#       '%F{5}(%f%s%F{5})%F{3}-%F{5}[%F{2}%b%F{5}]%f '
-zstyle ':vcs_info:*' formats       \
-        '%F{5}[%F{2}%b%F{5}]%f '
-zstyle ':vcs_info:(sv[nk]|bzr):*' branchformat '%b%F{1}:%F{3}%r'
+zstyle ':vcs_info:*' check-for-changes true
 precmd () { vcs_info }
-#PS1='%F{5}[%F{2}%n%F{5}] %F{3}%3~ ${vcs_info_msg_0_}%f%# '
-PS1='%F{3}%3~ ${vcs_info_msg_0_}%f%# '
+PS1='%F{5}%n@%m%f:%F{4}%~%F{6}${vcs_info_msg_0_}%f %# '
 
 # The following lines were added by compinstall
 
