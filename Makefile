@@ -1,4 +1,4 @@
-DOTFILES = common zsh arch-i3-hidpi bash linux
+DOTFILES = common zsh arch-i3-hidpi bash linux sanger-laptop
 .PHONY: clean $(DOTFILES)
 
 $(DOTFILES): %:
