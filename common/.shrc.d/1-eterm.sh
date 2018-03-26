@@ -4,11 +4,8 @@ set_eterm_dir() {
     echo -e "\033AnSiTu" "$LOGNAME"
     echo -e "\033AnSiTh" "$(hostname)"
     echo -e "\033AnSiTc" "$(pwd)"
-
-    history -a # write history to disk
 }
 
-## http://stackoverflow.com/a/10050104/3718509
 #if [ -n "$INSIDE_EMACS" ]; then
 if [ "$TERM" = "eterm-color" ]; then
     # bash
