@@ -11,6 +11,11 @@ zstyle ':vcs_info:*' check-for-changes true
 precmd () { vcs_info }
 PS1='%F{5}%n@%m%f:%F{4}%~%F{6}${vcs_info_msg_0_}%f %# '
 
+# direnv
+if type direnv > /dev/null; then
+     eval "$(direnv hook zsh)"
+fi
+
 # The following lines were added by compinstall
 
 zstyle ':completion:*' list-colors ''
