@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# set prompt; try to use git-prompt
 BLACK="\[\e[30m\]"
 RED="\[\e[31m\]"
 GREEN="\[\e[32m\]"
@@ -11,9 +10,19 @@ MAGENTA="\[\e[35m\]"
 GRAY="\[\e[37m\]"
 WHITE="\[\e[39m\]" # default
 PS1=$MAGENTA'\u@\h'$BLUE':\w'$WHITE
+
 if [ -r /usr/share/git/completion/git-prompt.sh ]; then
     . /usr/share/git/completion/git-prompt.sh
+elif [ -r ~/.git-prompt.sh ]
+then
+    # download with:
+    # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
+    . ~/.git-prompt.sh
+fi
+
+if [ "$(type -t __git_ps1)" = function ]; then
     export GIT_PS1_SHOWDIRTYSTATE=1
     PS1=$PS1$CYAN'$(__git_ps1 ":%s")'$WHITE
 fi
+
 PS1="["$PS1"]\$ "
