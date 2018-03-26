@@ -1,18 +1,19 @@
-## enable directory tracking in emacs term
+# Emacs ansi-term directory tracking
+# https://www.emacswiki.org/emacs/AnsiTermHints#toc5
+set_eterm_dir() {
+    echo -e "\033AnSiTu" "$LOGNAME"
+    echo -e "\033AnSiTh" "$(hostname)"
+    echo -e "\033AnSiTc" "$(pwd)"
+
+    history -a # write history to disk
+}
+
 ## http://stackoverflow.com/a/10050104/3718509
 #if [ -n "$INSIDE_EMACS" ]; then
 if [ "$TERM" = "eterm-color" ]; then
-    # function to set the dired and host for ansiterm
-    set_eterm_dir() {
-        # following are needed to reset username/host
-        # in case they have been changed in ssh session
-        print -P "\033AnSiTu %n"
-        print -P "\033AnSiTh" "$(hostname -f)"
-        # set ansiterm dired
-        print -P "\033AnSiTc %d"
-    }
-
-    # call prmptcmd whenever prompt is redrawn
+    # bash
+    PROMPT_COMMAND=set_eterm_dir
+    # zsh
     precmd_functions=($precmd_functions set_eterm_dir)
 fi
 
