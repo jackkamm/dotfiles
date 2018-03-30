@@ -1,17 +1,8 @@
+#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-light-256.Xresources"
+!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
+
 #include ".Xresources.d/hidpi"
 !#include ".Xresources.d/lowres"
 #include ".Xresources.d/urxvt"
-
-!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-gruvbox-light-soft-256.Xresources"
-!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-ocean-256.Xresources"
-
-!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-light-256.Xresources"
-#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
-
-!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-spacemacs-256.Xresources"
-
-!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-oceanicnext-256.Xresources"
-!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-unikitty-dark-256.Xresources"
-!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-atelier-plateau-light-256.Xresources"
 
 rofi.dpi: 192
