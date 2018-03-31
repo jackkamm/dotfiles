@@ -1,8 +1,0 @@
-#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-light-256.Xresources"
-!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
-
-#include ".Xresources.d/hidpi"
-!#include ".Xresources.d/lowres"
-#include ".Xresources.d/urxvt"
-
-rofi.dpi: 192
