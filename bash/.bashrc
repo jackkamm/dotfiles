@@ -5,9 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-if [ -d ~/.shrc.d ]; then
-    for profile in $(ls ~/.shrc.d/); do
-        . ~/.shrc.d/$profile
+if [ -d ~/.shellrc.d ]; then
+    for profile in $(ls ~/.shellrc.d/); do
+        . ~/.shellrc.d/$profile
     done
 fi
 

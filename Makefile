@@ -5,4 +5,4 @@ $(DOTFILES): %:
 	stow -R --no-folding -t $(HOME) $*
 
 clean:
-	stow -t $(HOME) -D $(DOTFILES)
+	stow --no-folding -t $(HOME) -D $(DOTFILES)
