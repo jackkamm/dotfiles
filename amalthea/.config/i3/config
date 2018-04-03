@@ -105,19 +105,23 @@ bindsym $mod+Return exec urxvt -e "tmux"
 bindsym $mod+Shift+q kill
 
 # reload urxvt background/font
-bindsym $mod+u exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
+bindsym $mod+x exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
-# start dmenu (a program launcher)
-# use interactive shell for aliases
-bindsym $mod+d exec "bash -ic 'compgen -ac' | dmenu | bash -i"
+# modified version of dmenu_run for aliases
+# use non-interactive bash compgen to generate aliases without latency
+#bindsym $mod+d exec "bash -c 'source ~/.shellrc.d/1-aliases.sh && compgen -ac' | dmenu | bash -i"
+bindsym $mod+d exec "bash -c 'source ~/.shellrc.d/1-aliases.sh && compgen -ac' | rofi -dmenu | bash -i"
+#bindsym $mod+d exec "dmenu_run"
 
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
 
-# scrot & gimp - root
-bindsym $mod+shift+p exec scrot -e 'mv $f /tmp/ && krita /tmp/$f'
-# scrot & gimp - select window or rectangle
-bindsym --release $mod+p exec scrot -s -e 'mv $f /tmp/ && krita /tmp/$f' --release # change focus
+## scrot & gimp - root
+#bindsym $mod+shift+p exec scrot -e 'mv $f /tmp/ && krita /tmp/$f'
+## scrot & gimp - select window or rectangle
+#bindsym --release $mod+p exec scrot -s -e 'mv $f /tmp/ && krita /tmp/$f' --release # change focus
+
+bindsym $mod+p exec rofi-pass
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
