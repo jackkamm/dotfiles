@@ -45,10 +45,10 @@ export GDK_DPI_SCALE=0.5
 #exec startxfce4
 #exec startlxqt
 
-# https://bbs.archlinux.org/viewtopic.php?id=231006
-dbus-update-activation-environment --systemd DISPLAY
-eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
-export SSH_AUTH_SOCK
+## https://bbs.archlinux.org/viewtopic.php?id=231006
+#dbus-update-activation-environment --systemd DISPLAY
+#eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+#export SSH_AUTH_SOCK
 
 export QT_QPA_PLATFORMTHEME="qt5ct" # for qt icons in some KDE apps
 configure_screens.py
