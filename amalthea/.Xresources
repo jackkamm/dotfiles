@@ -5,4 +5,6 @@
 !#include ".Xresources.d/lowres"
 #include ".Xresources.d/urxvt"
 
+!alternatively can put these in .config/rofi/config
 rofi.dpi: 192
+rofi.theme: /usr/share/rofi/themes/lb.rasi

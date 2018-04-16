@@ -9,10 +9,11 @@
 #exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xrandr
 
 ## desktop background
-exec --no-startup-id feh --bg-tile ~/Pictures/Bild15_Paul_Klee_Harmonie_der_nördlichen_Flora_df1_f06248a7d4.png
+#exec --no-startup-id feh --bg-tile ~/Pictures/Bild15_Paul_Klee_Harmonie_der_nördlichen_Flora_df1_f06248a7d4.png
 
 ## screensaver
-exec --no-startup-id xss-lock -- i3lock -n -i /home/jack/Pictures/Bild15_Paul_Klee_Harmonie_der_nördlichen_Flora_df1_f06248a7d4.png -t
+exec --no-startup-id xss-lock -- i3lock -n -c 000000
+#exec --no-startup-id xss-lock -- i3lock -n -i /home/jack/Pictures/Bild15_Paul_Klee_Harmonie_der_nördlichen_Flora_df1_f06248a7d4.png -t
 #exec --no-startup-id xss-lock -- i3lock -n -c 380059
 #exec --no-startup-id gnome-screensaver
 #exec --no-startup-id xfce4-power-manager
