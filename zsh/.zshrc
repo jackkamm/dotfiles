@@ -1,8 +1,4 @@
-if [ -d ~/.shellrc.d ]; then
-    for profile in $(ls ~/.shellrc.d/); do
-        . ~/.shellrc.d/$profile
-    done
-fi
+[[ -r ~/.shellrc ]] && . ~/.shellrc
 
 # prompt+git, see "man zshcontrib", /vcs_info
 setopt PROMPT_SUBST

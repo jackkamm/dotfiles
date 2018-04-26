@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias spotify="spotify --force-device-scale-factor=2"
 alias openvpn="sudo openvpn --writepid /var/run/openvpn.pid --config"
 alias feh="feh --keep-zoom-vp"

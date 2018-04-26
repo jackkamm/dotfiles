@@ -1,4 +1,4 @@
-DOTFILES = common zsh amalthea bash linux sanger-laptop
+DOTFILES = common zsh amalthea bash sanger-laptop
 .PHONY: clean $(DOTFILES)
 
 $(DOTFILES): %:
