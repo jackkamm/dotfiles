@@ -1,25 +1,18 @@
 #!/bin/bash
 
-[[ -r ~/.shell_aliases ]] && . ~/.shell_aliases
+## common initialization for bash, zsh
+## source from .bashrc/.zshrc with:
+## [[ -r ~/.shellrc ]] && . ~/.shellrc
 
-# ls with color
+# ls colors
 
 if [[ "$(uname)" == 'Linux' ]]; then
     alias ls='ls --color=auto'
 fi
 
-# conda
-
-if [ -d $HOME/miniconda3 ];
-then
-	  . $HOME/miniconda3/etc/profile.d/conda.sh
-elif [ -d $HOME/anaconda3 ]
-then
-	  . $HOME/anaconda3/etc/profile.d/conda.sh
-fi
-
 # Emacs ansi-term directory tracking
 # https://www.emacswiki.org/emacs/AnsiTermHints#toc5
+
 set_eterm_dir() {
     echo -e "\033AnSiTu" "$LOGNAME"
     echo -e "\033AnSiTh" "$(hostname)"

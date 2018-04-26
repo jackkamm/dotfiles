@@ -1,4 +1,4 @@
-DOTFILES = common zsh amalthea sanger-laptop
+DOTFILES = common amalthea sanger-laptop
 .PHONY: clean $(DOTFILES)
 
 $(DOTFILES): %:
