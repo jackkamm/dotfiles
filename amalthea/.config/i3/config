@@ -12,8 +12,9 @@
 #exec --no-startup-id feh --bg-tile ~/Pictures/Bild15_Paul_Klee_Harmonie_der_nördlichen_Flora_df1_f06248a7d4.png
 
 ## screensaver
-## use AUR package i3lock-media-keys for -m flag to allow mediakeys (e.g. volume) when locked
-exec --no-startup-id xss-lock -- i3lock -n -c 000000 -m
+## use AUR package i3lock-media-keys for --pass-media-keys
+exec --no-startup-id xss-lock -- i3lock -n -c 000000 --pass-media-keys
+bindsym $mod+period exec i3lock -n -c 000000 --pass-media-keys
 
 ## notifications
 exec --no-startup-id dunst

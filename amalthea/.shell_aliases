@@ -9,7 +9,6 @@ alias cambridge-up="sudo ipsec up CAM"
 alias cambridge-down="sudo ipsec down CAM"
 alias cambridge-restart="sudo ipsec restart CAM"
 alias nm-restart="sudo systemctl restart NetworkManager.service"
-alias i3lock="i3lock -c 000000"
 
 # replace Gnome/Gtk apps with KDE/Qt apps
 # for better integration with i3+hidpi
