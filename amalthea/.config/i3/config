@@ -103,10 +103,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+x exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
 # modified version of dmenu_run for aliases
-# use non-interactive bash compgen to generate aliases without latency
-#bindsym $mod+d exec "bash -c 'source ~/.shellrc.d/1-aliases.sh && compgen -ac' | dmenu | bash -i"
-bindsym $mod+d exec "bash -c 'source ~/.shell_aliases && compgen -ac' | rofi -dmenu | bash -i"
-#bindsym $mod+d exec "dmenu_run"
+bindsym $mod+d exec "i3-dmenu-desktop --dmenu='rofi -dmenu -i'"
 
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
