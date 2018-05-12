@@ -1,5 +1,3 @@
-#!/bin/bash
-
 ## source this file from .bashrc/.zshrc with:
 ## [[ -r ~/.profile ]] && . ~/.profile
 
