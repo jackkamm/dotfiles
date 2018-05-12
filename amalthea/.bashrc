@@ -6,5 +6,6 @@
 [[ $- != *i* ]] && return
 
 [[ -r ~/.bash_prompt ]] && . ~/.bash_prompt
-[[ -r ~/.shellrc ]] && . ~/.shellrc
 [[ -r ~/.shell_aliases ]] && . ~/.shell_aliases
+
+[[ -r ~/.profile ]] && . ~/.profile
