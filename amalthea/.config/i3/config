@@ -12,11 +12,8 @@
 #exec --no-startup-id feh --bg-tile ~/Pictures/Bild15_Paul_Klee_Harmonie_der_nördlichen_Flora_df1_f06248a7d4.png
 
 ## screensaver
-exec --no-startup-id xss-lock -- i3lock -n -c 000000
-#exec --no-startup-id xss-lock -- i3lock -n -i /home/jack/Pictures/Bild15_Paul_Klee_Harmonie_der_nördlichen_Flora_df1_f06248a7d4.png -t
-#exec --no-startup-id xss-lock -- i3lock -n -c 380059
-#exec --no-startup-id gnome-screensaver
-#exec --no-startup-id xfce4-power-manager
+## use AUR package i3lock-media-keys for -m flag to allow mediakeys (e.g. volume) when locked
+exec --no-startup-id xss-lock -- i3lock -n -c 000000 -m
 
 ## notifications
 exec --no-startup-id dunst
@@ -102,8 +99,9 @@ bindsym $mod+Shift+q kill
 # reload urxvt background/font
 bindsym $mod+x exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
-# modified version of dmenu_run for aliases
 bindsym $mod+d exec "i3-dmenu-desktop --dmenu='rofi -dmenu -i'"
+bindsym $mod+Shift+b exec "rofi -show window"
+
 
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
