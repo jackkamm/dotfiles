@@ -100,7 +100,7 @@ bindsym $mod+Shift+q kill
 # reload urxvt background/font
 bindsym $mod+x exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
-bindsym $mod+d exec "i3-dmenu-desktop --dmenu='rofi -dmenu -i'"
+bindsym $mod+d exec "j4-dmenu-desktop --dmenu='rofi -dmenu -i'"
 bindsym $mod+Shift+b exec "rofi -show window"
 
 
