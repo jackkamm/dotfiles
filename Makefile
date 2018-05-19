@@ -1,4 +1,4 @@
-DOTFILES = common amalthea sanger-laptop
+DOTFILES = common amalthea amalthea-macos
 .PHONY: clean $(DOTFILES)
 
 $(DOTFILES): %:
