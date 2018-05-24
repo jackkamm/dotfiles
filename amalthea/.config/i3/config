@@ -102,7 +102,7 @@ bindsym $mod+x exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
 bindsym $mod+d exec "j4-dmenu-desktop --dmenu='rofi -dmenu -i'"
 bindsym $mod+Shift+d exec "rofi -show run"
-bindsym $mod+Shift+b exec "rofi -show window"
+bindsym $mod+Tab exec "rofi -show window"
 
 
 bindsym $mod+Shift+comma move workspace to output left
