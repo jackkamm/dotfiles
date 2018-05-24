@@ -7,3 +7,5 @@ Xcursor.size:  48
 !alternatively can put in .config/rofi/config
 rofi.dpi: 192
 rofi.theme: /usr/share/rofi/themes/lb.rasi
+
+#include ".Xresources.d/urxvt"
