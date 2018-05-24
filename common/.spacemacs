@@ -34,11 +34,11 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
+     helm
+     ;;ivy
      restructuredtext
      sphinx
      php
-     helm
-     ;;ivy
      ;;mu4e
      gnus
      notmuch
@@ -534,6 +534,13 @@ before packages are loaded."
       (load-file custom-file))
 
   (remove-hook 'c-mode-common-hook 'spacemacs//c-toggle-auto-newline)
+
+  ;; fix annoying ESS indentation
+  ;; TODO submit PR (also test in Rstudio)
+  ;; http://ess.r-project.org/Manual/ess.html#Indenting
+  ;; http://r.789695.n4.nabble.com/Commenting-conventions-td3216584.html
+  (setq ess-indent-with-fancy-comments nil)
+
   ;; cask files
   ;(require 'cask "/usr/share/cask/cask.el")
   ;(cask-initialize)
