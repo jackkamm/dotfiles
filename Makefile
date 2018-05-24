@@ -1,4 +1,4 @@
-DOTFILES = common khalid amalthea-macos
+DOTFILES = common khalid jaheira
 .PHONY: clean $(DOTFILES)
 
 $(DOTFILES): %:
