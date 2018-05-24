@@ -1,14 +1,14 @@
 Initial setup:
 ```
-stow -t ~ stow
+stow -t ~ -d stow stow
 ```
 
 To stow/restow:
 ```
-stow -R -t ~ <directory> <directory2> ...
+stow -R -t ~ -d stow <directory> <directory2> ...
 ```
 
 To unstow:
 ```
-stow -t ~ -D <directory1> <directory2> ...
+stow -t ~ -d stow -D <directory1> <directory2> ...
 ```
