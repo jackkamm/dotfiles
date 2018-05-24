@@ -10,6 +10,8 @@ alias cambridge-down="sudo ipsec down CAM"
 alias cambridge-restart="sudo ipsec restart CAM"
 alias nm-restart="sudo systemctl restart NetworkManager.service"
 
+alias spacemacs="HOME=~/spacemacs /bin/emacs"
+
 # replace Gnome/Gtk apps with KDE/Qt apps
 # for better integration with i3+hidpi
 #alias gimp="krita"
