@@ -10,4 +10,4 @@ PERL_MM_OPT="INSTALL_BASE=$HOME/perl5"; export PERL_MM_OPT;
 
 . $HOME/miniconda3/etc/profile.d/conda.sh
 
-[[ -r ~/.profile ]] && . ~/.profile
+[[ -r ~/.shellrc ]] && . ~/.shellrc
