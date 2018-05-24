@@ -51,7 +51,6 @@ export GDK_DPI_SCALE=0.5
 #export SSH_AUTH_SOCK
 
 export QT_QPA_PLATFORMTHEME="qt5ct" # for qt icons in some KDE apps
-configure_screens.py
 
 ## bug? need to call "xrandr" without arguments before setting resolution
 #xrandr

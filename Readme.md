@@ -1,6 +1,7 @@
 Initial setup:
 ```
 stow -t ~ -d stow stow
+stow -t ~ -d stow common
 ```
 
 To stow/restow:
