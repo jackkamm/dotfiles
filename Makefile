@@ -1,4 +1,4 @@
-DOTFILES = common amalthea sanger-laptop
+DOTFILES = common khalid sanger-laptop
 .PHONY: clean $(DOTFILES)
 
 $(DOTFILES): %:
