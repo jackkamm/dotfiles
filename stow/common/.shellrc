@@ -3,7 +3,6 @@
 ## source this file from .bashrc/.zshrc with:
 ## [[ -r ~/.shellrc ]] && . ~/.shellrc
 
-export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.local/usr/bin:$HOME/.local/usr/local/bin:$PATH
 export EDITOR=vim
 
 # ls colors
