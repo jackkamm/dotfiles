@@ -1,8 +1,9 @@
 !#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-light-256.Xresources"
 #include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
 
-#include ".Xresources.d/hidpi"
-#include ".Xresources.d/urxvt"
+Xft.dpi: 192
+Xcursor.size:  48
 
 !alternatively can put in .config/rofi/config
+rofi.dpi: 192
 rofi.theme: /usr/share/rofi/themes/lb.rasi
