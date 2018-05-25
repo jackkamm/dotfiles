@@ -1,3 +1,10 @@
+First, setup cpan and Stow:
+```
+sudo apt-get install liblocal-lib-perl
+cpan
+cpan Stow
+```
+
 Initial setup:
 ```
 make setup
