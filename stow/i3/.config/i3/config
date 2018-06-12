@@ -1,20 +1,6 @@
-## apply xmodmap to keyboard automatically
-#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-keyboard
-
-## let gnome manage mouse/trackpad sensitivity
-#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-mouse
-
-## HIDPI scaling
-#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
-#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xrandr
-
-## desktop background
-#exec --no-startup-id feh --bg-tile ~/Pictures/Bild15_Paul_Klee_Harmonie_der_nördlichen_Flora_df1_f06248a7d4.png
-
-## screensaver
-## use AUR package i3lock-media-keys for --pass-media-keys
-exec --no-startup-id xss-lock -- i3lock -n -c 000000 --pass-media-keys
-bindsym $mod+period exec i3lock -n -c 000000 --pass-media-keys
+## screen lock
+exec --no-startup-id xss-lock -- i3lock -n -c 000000
+bindsym $mod+period exec i3lock -n -c 000000
 
 ## notifications
 exec --no-startup-id dunst
@@ -31,8 +17,6 @@ exec --no-startup-id blueberry-tray
 
 ## redshift
 exec --no-startup-id redshift-gtk
-
-#exec --no-startup-id workrave
 
 ## caffeine turns off screen sleep when watching fullscreen video
 exec --no-startup-id caffeine
@@ -74,18 +58,6 @@ font pango:DejaVu Sans Mono 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-#new_window pixel 4
-#new_window normal 4
-
-## force all windows (even gnome programs) to have border
-## https://github.com/i3/i3/issues/2237#issuecomment-191374257
-#for_window [class=".*"] border pixel 4
-for_window [class="Evince"] border normal
-
-## keybinding to switch between hidpi and low-res
-#bindsym $mod+m exec source $HOME/.screenlayout/hidpi.sh
-#bindsym $mod+shift+m exec source $HOME/.screenlayout/low-res.sh
-
 # detect and configure external monitor
 bindsym $mod+m exec autoxrandr
 bindsym $mod+Shift+m exec xrandr --output eDP1 --mode 1280x800
@@ -100,10 +72,8 @@ bindsym $mod+Shift+q kill
 # reload urxvt background/font
 bindsym $mod+x exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
-bindsym $mod+d exec "j4-dmenu-desktop --dmenu='rofi -dmenu -i'"
-bindsym $mod+Shift+d exec "rofi -show run"
-bindsym $mod+Tab exec "rofi -show window"
-
+bindsym $mod+d exec "i3-dmenu-desktop"
+bindsym $mod+Shift+d exec "dmenu_run"
 
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
@@ -113,7 +83,7 @@ bindsym $mod+Shift+period move workspace to output right
 ## scrot & gimp - select window or rectangle
 #bindsym --release $mod+p exec scrot -s -e 'mv $f /tmp/ && krita /tmp/$f' --release # change focus
 
-bindsym $mod+p exec rofi-pass
+bindsym $mod+p exec passmenu
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -196,8 +166,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exec "i3-nagbar -f 'pango:DejaVu Sans Mono 11' -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -230,12 +199,9 @@ bindsym $mod+r mode "resize"
 ## https://faq.i3wm.org/question/125/how-to-change-the-systems-volume/
 
 # volume
-# need to send signal to i3blocks for it to update volume
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0 && pkill -RTMIN+10 i3blocks
-#GUSR1 i3status
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0 && pkill -RTMIN+10 i3blocks
-#GUSR1 i3status
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 ## media player
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -260,7 +226,6 @@ bindsym button5 nop
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        #status_command i3status
-        status_command i3blocks
-} 
+        status_command i3status
+}
 
