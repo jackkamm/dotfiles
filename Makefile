@@ -5,8 +5,7 @@ setup:
 	stow -R -t ~ -d stow common
 
 khalid: setup
-	stow -t ~ -d stow -D khalid
-	stow -R -t ~ -d stow i3 Xresources
+	stow -R -t ~ -d stow i3 Xresources --defer="\.Xresources$$"
 	stow -R -t ~ -d stow khalid --override="\.Xresources$$"
 	# to run spacemacs: "HOME=~/spacemacs /bin/emacs"
 	mkdir -p ~/spacemacs

@@ -2,7 +2,7 @@
 #include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
 
 Xft.dpi: 192
-Xcursor.size:  48
+#Xcursor.size:  48
 
 !alternatively can put in .config/rofi/config
 rofi.dpi: 192
