@@ -72,8 +72,8 @@ bindsym $mod+Shift+q kill
 # reload urxvt background/font
 bindsym $mod+x exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
 
-bindsym $mod+d exec "i3-dmenu-desktop"
-bindsym $mod+Shift+d exec "dmenu_run"
+bindsym $mod+d exec "dmenu_run"
+bindsym $mod+Shift+d exec "i3-dmenu-desktop"
 
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
