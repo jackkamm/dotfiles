@@ -62,9 +62,11 @@ floating_modifier $mod
 bindsym $mod+m exec autoxrandr
 bindsym $mod+Shift+m exec xrandr --output eDP1 --mode 1280x800
 
-# start a terminal
-bindsym $mod+Shift+Return exec urxvt
-bindsym $mod+Return exec urxvt -e "tmux"
+# terminal
+bindsym $mod+Return exec urxvt
+
+# emacsclient
+bindsym $mod+Shift+Return exec emacsclient -c -a 'emacs'
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -113,9 +115,6 @@ bindsym $mod+semicolon split h
 
 # split in vertical orientation
 bindsym $mod+v split v
-
-# launch emacsclient
-bindsym $mod+c exec emacsclient -c -a '/bin/emacs'
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
