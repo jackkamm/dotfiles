@@ -10,7 +10,7 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id wicd-client --tray
 
 ## dropbox icon
-exec --no-startup-id dropbox
+exec --no-startup-id dropbox start
 
 ## bluetooth system tray
 exec --no-startup-id blueberry-tray
@@ -58,10 +58,6 @@ font pango:DejaVu Sans Mono 10
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-# detect and configure external monitor
-bindsym $mod+m exec autoxrandr
-bindsym $mod+Shift+m exec xrandr --output eDP1 --mode 1280x800
-
 # terminal
 bindsym $mod+Return exec urxvt
 
@@ -85,7 +81,7 @@ bindsym $mod+Shift+period move workspace to output right
 ## scrot & gimp - select window or rectangle
 #bindsym --release $mod+p exec scrot -s -e 'mv $f /tmp/ && krita /tmp/$f' --release # change focus
 
-bindsym $mod+p exec passmenu
+bindsym $mod+p exec passmenu --type
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
