@@ -1,0 +1,4 @@
+Xft.dpi: 192
+#include ".Xresources.d/urxvt"
+#include ".Xresources.d/base16-solarized-dark-256.Xresources"
+!#include ".Xresources.d/base16-solarized-light-256.Xresources"
