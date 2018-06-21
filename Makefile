@@ -8,6 +8,3 @@ khalid: setup
 	stow -R -t ~ -d stow i3 Xresources spacemacs
 	stow -R -t ~ -d stow khalid
 
-xkeyboard: /etc/X11/xorg.conf.d/90-custom-kbd.conf
-/etc/%: etc/%
-	cp $< $@
