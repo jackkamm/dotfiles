@@ -11,15 +11,10 @@ GRAY="\[\e[37m\]"
 WHITE="\[\e[39m\]" # default
 PS1=$MAGENTA'\u@\h'$BLUE':\w'$WHITE
 
-if [ -r /usr/share/git/completion/git-prompt.sh ]; then
-    . /usr/share/git/completion/git-prompt.sh
-elif [ -r ~/.git-prompt.sh ]
-then
-    # download with:
-    # curl https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh -o ~/.git-prompt.sh
-    . ~/.git-prompt.sh
-fi
-
+# to get git prompt, source git-prompt.sh BEFORE this file
+# Arch: /usr/share/git/completion/git-prompt.sh
+# Fedora: /usr/share/git-core/contrib/completion/git-prompt.sh
+# web: https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 if [ "$(type -t __git_ps1)" = function ]; then
     export GIT_PS1_SHOWDIRTYSTATE=1
     PS1=$PS1$CYAN'$(__git_ps1 ":%s")'$WHITE
