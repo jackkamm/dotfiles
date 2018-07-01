@@ -3,6 +3,7 @@
 
 ## .bashrc ONLY
 
+. ~/git-prompt.sh # see comment in ~/.bash_prompt for correct path
 [[ -r ~/.bash_prompt ]] && . ~/.bash_prompt
 
 ## .zshrc ONLY
