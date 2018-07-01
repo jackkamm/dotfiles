@@ -1,18 +1,15 @@
-# -*- mode: sh; -*-
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
-## source this file from .bashrc/.zshrc with:
-## [[ -r ~/.shellrc ]] && . ~/.shellrc
+## .bashrc ONLY
 
-export EDITOR=vim
+[[ -r ~/.bash_prompt ]] && . ~/.bash_prompt
 
-# ls colors
+## .zshrc ONLY
 
-if [[ "$(uname)" == 'Linux' ]]; then
-    alias ls='ls --color=auto'
-fi
+[[ -r ~/.zsh_prompt ]] && . ~/.zsh_prompt
 
-# Emacs ansi-term directory tracking
-# https://www.emacswiki.org/emacs/AnsiTermHints#toc5
+## emacs-term remote directory tracking
 
 set_eterm_dir() {
     echo -e "\033AnSiTu" "$LOGNAME"
@@ -28,7 +25,13 @@ if [ "$TERM" = "eterm-color" ]; then
     precmd_functions=($precmd_functions set_eterm_dir)
 fi
 
-## fixes broken term-send-backspace in emacs term in OSX
+## linux ONLY
+
+alias ls='ls --color=auto'
+
+## OSX emacs-term stuff, probably outdated....
+
+# fixes broken term-send-backspace in emacs term in OSX
 if [[ -n $INSIDE_EMACS && $(uname) == 'Darwin' ]]; then
     stty ek
     ## alternate solution:
