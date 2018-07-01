@@ -1,4 +1,8 @@
-Xft.dpi: 192
 #include ".Xresources.d/urxvt"
 #include ".Xresources.d/base16-solarized-dark-256.Xresources"
 !#include ".Xresources.d/base16-solarized-light-256.Xresources"
+
+! this seems to fix an intermittent bug where the mouse is giant in GTK sometimes
+Xcursor.size: 24
+
+!Xft.dpi: 192
