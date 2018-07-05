@@ -31,7 +31,8 @@ font pango:DejaVu Sans Mono 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+#bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec xfce4-terminal -e tmux
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -164,11 +165,10 @@ bindsym button4 nop
 bindsym button5 nop
 
 # move workspace between monitors
-# TODO: use mod+(shift+)PageUp/down
 bindsym $mod+Shift+comma move workspace to output left
 bindsym $mod+Shift+period move workspace to output right
-bindsym $mod+Shift+slash move workspace to output up
-bindsym $mod+slash move workspace to output down
+bindsym $mod+comma move workspace to output up
+bindsym $mod+period move workspace to output down
 
 # rename workspace
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
@@ -177,36 +177,34 @@ bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-bindsym XF86AudioPlay exec playerctl play-pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
-
-# reset xrandr (turn off external outputs)
-bindsym $mod+m exec "~/.screenlayout/default.sh"
-
-# wrapper script around light-locker-command or i3lock
-bindsym $mod+period exec "~/bin/my-locker"
 
 # emacsclient
 bindsym $mod+Shift+Return exec emacsclient -c -a 'emacs'
 
-# pass
+# passmenu
 bindsym $mod+p exec passmenu --type
 
-# reload urxvt background/font
-bindsym $mod+x exec "xrdb ~/.Xresources; killall -SIGHUP urxvt"
+# reset xrandr (turn off external outputs)
+bindsym $mod+XF86Display exec "~/.screenlayout/default.sh"
 
-# TODO bind this to mod+PrintScreen
-## scrot & gimp - root
-#bindsym $mod+shift+p exec scrot -e 'mv $f /tmp/ && krita /tmp/$f'
-## scrot & gimp - select window or rectangle
-#bindsym --release $mod+p exec scrot -s -e 'mv $f /tmp/ && krita /tmp/$f' --release # change focus
+# start some nice programs
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
+exec --no-startup-id dropbox start
+exec --no-startup-id redshift-gtk
 
-# to keep this config portable, don't launch daemons here.
-# instead, launch daemons from ~/.profile like so:
-# if [ "$DESKTOP_SESSION" == "i3" ]; then
-#     nm-applet &
-#     blueberry-tray &
-#     light-locker &
-#     xfce4-power-manager &
-# fi
+# personal xorg configurations (e.g. libinput)
+exec --no-startup-id ~/.xorg-conf
+
+## utilities from xfce
+
+# kill notifactions
+bindsym $mod+Escape exec "pkill xfce4-notifyd"
+
+# screenshot
+bindsym Print exec "xfce4-screenshooter"
+
+# power, locker, sleep, brightness keys
+exec --no-startup-id xfce4-power-manager
+exec --no-startup-id light-locker
+bindsym $mod+Shift+Escape exec light-locker-command -l
