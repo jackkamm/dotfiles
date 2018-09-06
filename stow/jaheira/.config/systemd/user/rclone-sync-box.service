@@ -1,0 +1,8 @@
+[Unit]
+Description=Sync (download only) box.com with rclone
+RefuseManualStart=no
+RefuseManualStop=yes
+
+[Service]
+Type=oneshot
+ExecStart=%h/box.com/rclone-sync-box sync box:/ %h/box.com/rclone-copy/

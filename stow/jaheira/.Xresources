@@ -1,0 +1,2 @@
+# prevents occasional giant mouse cursor bug in GTK
+Xcursor.size:  24
