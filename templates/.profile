@@ -1,5 +1,10 @@
 export EDITOR=vim
-export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+
+if [ -z "$OLDPATH" ]; then
+    export OLDPATH=$PATH
+    export PATH=$HOME/bin:$HOME/.local/bin:$PATH
+fi
+
 
 ## .bash_profile ONLY
 [[ -f ~/.bashrc ]] && . ~/.bashrc
