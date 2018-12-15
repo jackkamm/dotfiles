@@ -1,2 +1,6 @@
-# prevents occasional giant mouse cursor bug in GTK
-Xcursor.size:  24
+#include ".Xresources.d/urxvt"
+#include ".Xresources.d/base16-solarized-dark-256.Xresources"
+!#include ".Xresources.d/base16-solarized-light-256.Xresources"
+
+! prevents occasional giant mouse cursor bug in GTK
+Xcursor.size: 24
