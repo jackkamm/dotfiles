@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Emacsclient-mail
+Exec=emacsclient -c -a emacs --eval '(browse-url-mail "%u")'
+Type=Application
+StartupWMClass=Emacs
+MimeType=x-scheme-handler/mailto;
