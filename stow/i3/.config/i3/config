@@ -210,7 +210,9 @@ bindsym $mod+Escape exec "pkill xfce4-notifyd"
 # screenshot
 bindsym Print exec "xfce4-screenshooter"
 
-# power, locker, sleep, brightness keys
+# power, sleep, brightness keys
 exec --no-startup-id xfce4-power-manager
-exec --no-startup-id light-locker
-bindsym $mod+Shift+Escape exec light-locker-command -l
+
+# screen locker
+exec --no-startup-id xss-lock -- i3lock -n -c 000000
+bindsym $mod+Shift+Escape exec i3lock -n -c 000000
