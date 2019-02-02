@@ -176,11 +176,6 @@ bindsym $mod+period move workspace to output down
 # rename workspace
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
-# volume and media player
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-
 # emacsclient
 bindsym $mod+Shift+Return exec emacsclient -c
 
@@ -193,6 +188,10 @@ bindsym $mod+Tab exec rofi -show window
 # reset xrandr (turn off external outputs)
 bindsym $mod+XF86Display exec "~/.screenlayout/default.sh"
 
+# volume and media player
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 # start some nice programs
 exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
