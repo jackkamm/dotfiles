@@ -182,7 +182,7 @@ bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 
 # emacsclient
-bindsym $mod+Shift+Return exec emacsclient -c -a 'emacs'
+bindsym $mod+Shift+Return exec emacsclient -c
 
 # passmenu
 bindsym $mod+p exec passmenu --type
