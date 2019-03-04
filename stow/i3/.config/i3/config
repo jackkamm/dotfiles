@@ -158,7 +158,6 @@ bar {
         i3bar_command i3bar -t
         status_command i3status
 }
-#exec --no-startup-id xfce4-panel --disable-wm-check --sm-client-disable
 
 focus_follows_mouse no
 # Disable mouse scroll in title bar
@@ -196,7 +195,7 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 
 # screenshot
-bindsym Print exec "xfce4-screenshooter"
+bindsym Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
 
 ## kill notifactions
 bindsym $mod+Escape exec "pkill dunst"
