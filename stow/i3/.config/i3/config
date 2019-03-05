@@ -204,9 +204,6 @@ bindsym $mod+Escape exec "pkill dunst"
 bindsym $mod+Shift+Escape exec i3lock -n -c 000000
 exec --no-startup-id xss-lock -- i3lock -n -c 000000
 
-# personal xorg configurations (e.g. libinput)
-exec --no-startup-id ~/.xorg-conf
-
 # power management
 exec --no-startup-id xfce4-power-manager
 
