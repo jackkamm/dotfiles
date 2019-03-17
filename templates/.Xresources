@@ -1,8 +1,15 @@
-#include ".Xresources.d/urxvt"
-#include ".Xresources.d/base16-solarized-dark-256.Xresources"
-!#include ".Xresources.d/base16-solarized-light-256.Xresources"
+!Xft.dpi: 192
 
-! this seems to fix an intermittent bug where the mouse is giant in GTK sometimes
+!! prevents occasional giant mouse cursor bug in GTK
 Xcursor.size: 24
 
-!Xft.dpi: 192
+!! urxvt
+URxvt.font: xft:DejaVu Sans Mono:size=11
+URxvt.perl-ext-common: keyboard-select,config-reload
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.scrollBar: false
+! Nice color for border (can't remove it when fontsize/pixels mismatch)
+URxvt.borderColor: #222222
+
+!#include "src/base16-xresources/xresources/base16-solarized-light-256.Xresources"
+#include "src/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
