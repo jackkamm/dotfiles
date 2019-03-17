@@ -1,6 +1,5 @@
 URxvt.font: xft:DejaVu Sans Mono:size=11
-! keyboard-select for urxvt
 URxvt.perl-ext-common: keyboard-select,config-reload
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
-!URxvt.internalBorder: 0
+URxvt.borderColor: #222222
 URxvt.scrollBar: false
