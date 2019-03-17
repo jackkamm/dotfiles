@@ -1,0 +1,8 @@
+URxvt.font: xft:DejaVu Sans Mono:size=11
+URxvt.perl-ext-common: keyboard-select,config-reload
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.scrollBar: false
+! Disable printing the terminal contents when pressing PrintScreen.
+URxvt.print-pipe: "cat > /dev/null"
+! Nice color for border (can't remove it when fontsize/pixels mismatch)
+URxvt.borderColor: #222222
