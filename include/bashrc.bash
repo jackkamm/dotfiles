@@ -1,4 +1,7 @@
-#!/bin/bash
+## source from ~/.bashrc with:
+## [[ -r /path/to/bashrc.bash ]] && . /path/to/bashrc.bash
+
+# setup prompt
 
 BLACK="\[\e[30m\]"
 RED="\[\e[31m\]"

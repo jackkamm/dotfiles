@@ -1,4 +1,8 @@
-URxvt.font: xft:DejaVu Sans Mono:size=11
+! include this in ~/.Xresources like so:
+! #include "path/to/xresources.xresources"
+
+!! URxvt config
+!URxvt.font: xft:DejaVu Sans Mono:size=11
 URxvt.perl-ext-common: keyboard-select,config-reload
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.scrollBar: false
@@ -6,3 +10,8 @@ URxvt.scrollBar: false
 URxvt.print-pipe: "cat > /dev/null"
 ! Nice color for border (can't remove it when fontsize/pixels mismatch)
 URxvt.borderColor: #222222
+
+!! prevents occasional giant mouse cursor bug in GTK
+!Xcursor.size: 24
+
+!! For colors, use https://github.com/solarized/xresources

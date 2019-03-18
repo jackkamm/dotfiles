@@ -1,8 +1,5 @@
-#!/bin/zsh
-
-## setup prompt, completion for zsh
 ## source from .zshrc with:
-## [[ -r ~/.zsh_prompt ]] && . ~/.zsh_prompt
+## [[ -r /path/to/zshrc.zsh ]] && . /path/to/zshrc.zsh
 
 # prompt+git, see "man zshcontrib", /vcs_info
 setopt PROMPT_SUBST
