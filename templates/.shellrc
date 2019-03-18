@@ -7,6 +7,8 @@
 
 . ~/git-prompt.sh # see comment in ~/.bash_prompt for correct path
 [[ -r ~/.bash_prompt ]] && . ~/.bash_prompt
+# set window title to "edwin"
+PS1='\[\e]0;edwin\a\]'$PS1
 
 ## .zshrc ONLY
 
@@ -27,6 +29,15 @@ if [ "$TERM" = "eterm-color" ]; then
     # zsh
     precmd_functions=($precmd_functions set_eterm_dir)
 fi
+
+## directory tracking emacs term
+## https://stackoverflow.com/a/4101997/3718509
+#if [ -n "$INSIDE_EMACS" ]; then
+#   chpwd() { print -P "\033AnSiTc %d" }
+#   print -P "\033AnSiTu %n"
+#   print -P "\033AnSiTc %d"
+#fi
+
 
 ## linux ONLY
 
