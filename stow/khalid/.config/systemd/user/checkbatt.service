@@ -1,8 +1,0 @@
-[Unit]
-Description=check battery
-RefuseManualStart=no
-RefuseManualStop=yes
-
-[Service]
-Type=oneshot
-ExecStart=%h/bin/checkbatt.sh
