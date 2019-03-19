@@ -24,3 +24,6 @@ if [ "$(type -t __git_ps1)" = function ]; then
 fi
 
 PS1="["$PS1"]\$ "
+
+## set window title to "somename"
+#PS1='\[\e]0;somename\a\]'$PS1
