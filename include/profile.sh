@@ -12,7 +12,7 @@ export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 #[[ -r ~/miniconda3/etc/profile.d/conda.sh ]] && . ~/miniconda3/etc/profile.d/conda.sh
 
 ## use the same environment variables as systemd user units
-## by convention, conf files should have a numeric prefix, e.g. 00-env.conf
+## See also: man environment.d
 ENVIRONMENTD="$HOME/.config/environment.d"
 set -a
 if [ -d "$ENVIRONMENTD" ]; then
