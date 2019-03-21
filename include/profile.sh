@@ -8,7 +8,7 @@ export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
 #eval $(keychain --eval --quiet id_rsa [...])
 
-#PATH=$HOME/miniconda3/bin:$PATH
+#export PATH=$HOME/miniconda3/bin:$PATH
 #[[ -r ~/miniconda3/etc/profile.d/conda.sh ]] && . ~/miniconda3/etc/profile.d/conda.sh
 
 ## use the same environment variables as systemd user units
