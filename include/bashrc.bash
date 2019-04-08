@@ -25,5 +25,11 @@ fi
 
 PS1="["$PS1"]\$ "
 
-## set window title to "somename"
-#PS1='\[\e]0;somename\a\]'$PS1
+## set window title to "somename" on debian/ubuntu, xterm/rxvt
+#case "$TERM" in
+#xterm*|rxvt*)
+#    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}somename: \w\a\]$PS1"
+#    ;;
+#*)
+#    ;;
+#esac
