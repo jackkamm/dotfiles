@@ -21,4 +21,8 @@ if [ -d "$ENVIRONMENTD" ]; then
         . "$conf"
     done
 fi
+# https://wiki.archlinux.org/index.php/Systemd/User#PATH
+# Needed in case systemd ignores/overwrites PATH (e.g. on EC2 Ubuntu 18.04)
+systemctl --user import-environment PATH
+
 set +a
