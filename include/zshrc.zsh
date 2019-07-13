@@ -8,6 +8,8 @@ zstyle ':vcs_info:*' check-for-changes true
 precmd () { vcs_info }
 PS1='%F{5}%n@%m%f:%F{4}%~%F{6}${vcs_info_msg_0_}%f %# '
 
+alias bioconda-install="conda install -c conda-forge -c bioconda "
+
 # https://unix.stackexchange.com/questions/258656/how-can-i-delete-to-a-slash-or-a-word-in-zsh
 autoload -U select-word-style
 select-word-style bash
