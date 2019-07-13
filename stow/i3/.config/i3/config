@@ -136,11 +136,12 @@ mode "resize" {
         bindsym k resize shrink height 10 px or 10 ppt
         bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+        bindsym Shift+h resize shrink width 300 px or 30 ppt
+        bindsym Shift+j resize grow height 300 px or 30 ppt
+        bindsym Shift+k resize shrink height 300 px or 30 ppt
+        bindsym Shift+l resize grow width 300 px or 30 ppt
+
+        bindsym space resize set width 800 px; resize set height 600 px; move position center
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
