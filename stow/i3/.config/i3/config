@@ -174,6 +174,11 @@ bindsym $mod+period move workspace to output down
 # rename workspace
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
 
+# Correct handling of floating dialogs
+# https://wiki.archlinux.org/index.php/I3#Correct_handling_of_floating_dialogs
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+
 # emacsclient
 bindsym $mod+Shift+Return exec emacsclient -c
 
