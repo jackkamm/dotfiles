@@ -6,6 +6,9 @@ export EDITOR=vim
 # https://wiki.archlinux.org/index.php/wine#Unregister_existing_Wine_file_associations
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
+# https://faq.i3wm.org/question/3410/wm-shortcuts-ignored-in-virtual-machine.1.html
+export SPICE_NOGRAB=1
+
 #eval $(keychain --eval --quiet id_rsa [...])
 
 #export PATH=$HOME/miniconda3/bin:$PATH
