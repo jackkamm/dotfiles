@@ -155,8 +155,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         tray_output primary
-        # workaround for https://github.com/i3/i3/issues/3335 (requires i3-gaps)
-        i3bar_command i3bar -t
+        i3bar_command i3bar
         status_command i3status
 }
 
