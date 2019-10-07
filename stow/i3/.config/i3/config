@@ -206,8 +206,8 @@ bindsym $mod+Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
 bindsym $mod+Escape exec "pkill dunst"
 
 # screen locker
-bindsym $mod+Shift+Escape exec i3lock -n -c 000000
-exec --no-startup-id xss-lock -- i3lock -n -c 000000
+exec --no-startup-id xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
+bindsym $mod+Shift+Escape exec xset s activate
 
 # power management
 exec --no-startup-id xfce4-power-manager
