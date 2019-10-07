@@ -183,6 +183,7 @@ bindsym $mod+Shift+Return exec emacsclient -c
 
 # passmenu
 bindsym $mod+p exec passmenu --type
+bindsym $mod+Shift+p exec passmenu
 
 # window switcher
 bindsym $mod+Tab exec rofi -show window
