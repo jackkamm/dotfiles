@@ -208,6 +208,9 @@ bindsym $mod+Escape exec "pkill dunst"
 # screen locker
 exec --no-startup-id xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock
 bindsym $mod+Shift+Escape exec xset s activate
+# set dimmer duration (5s), otherwise locker won't start afterwards.
+# set idle length high (24h), b/c we use xfce4-power-manager instead
+exec --no-startup-id xset s 86400 5
 
 # power management
 exec --no-startup-id xfce4-power-manager
