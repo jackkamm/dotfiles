@@ -1,6 +1,6 @@
 To stow/restow:
 ```
-stow -R -t ~ -d stow <directory> <directory2> ...
+stow -R --no-folding -t ~ -d stow <directory> <directory2> ...
 ```
 
 To unstow:
