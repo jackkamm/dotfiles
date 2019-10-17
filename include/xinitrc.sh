@@ -1,6 +1,6 @@
 # source this from ~/.xinitrc
 
-/usr/lib/polkit-kde-authentication-agent-1 &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # https://wiki.archlinux.org/index.php/GNOME/Keyring#xinitrc_method
 dbus-update-activation-environment --systemd DISPLAY
