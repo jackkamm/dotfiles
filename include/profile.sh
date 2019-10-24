@@ -29,3 +29,6 @@ fi
 systemctl --user import-environment PATH
 
 set +a
+
+# prevent rofi-pass using whoami as default value of "user"
+export ROFI_PASS_DEFAULT_USER=""
