@@ -1,3 +1,5 @@
 [user]
 	email = jackkamm@gmail.com
 	name = Jack Kamm
+[submodule]
+	recurse = true
