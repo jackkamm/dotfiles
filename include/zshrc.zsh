@@ -5,7 +5,23 @@
 setopt PROMPT_SUBST
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' check-for-changes true
-precmd () { vcs_info }
+precmd () {vcs_info}
+
+# Copied from https://wiki.archlinux.org/index.php/Zsh#xterm_title
+autoload -Uz add-zsh-hook
+function xterm_title_precmd () {
+	print -Pn -- '\e]2;%n@%m %~\a'
+	[[ "$TERM" == 'screen'* ]] && print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-}\e\\'
+}
+function xterm_title_preexec () {
+	print -Pn -- '\e]2;%n@%m %~ %# ' && print -n -- "${(q)1}\a"
+	[[ "$TERM" == 'screen'* ]] && { print -Pn -- '\e_\005{g}%n\005{-}@\005{m}%m\005{-} \005{B}%~\005{-} %# ' && print -n -- "${(q)1}\e\\"; }
+}
+if [[ "$TERM" == (screen*|xterm*|rxvt*|tmux*|putty*|konsole*|gnome*) ]]; then
+	add-zsh-hook -Uz precmd xterm_title_precmd
+	add-zsh-hook -Uz preexec xterm_title_preexec
+fi
+
 PS1='%F{5}%n@%m%f:%F{4}%~%F{6}${vcs_info_msg_0_}%f %# '
 
 alias bioconda-install="conda install -c conda-forge -c bioconda "
