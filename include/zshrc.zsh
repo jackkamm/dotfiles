@@ -22,7 +22,13 @@ if [[ "$TERM" == (screen*|xterm*|rxvt*|tmux*|putty*|konsole*|gnome*) ]]; then
 	add-zsh-hook -Uz preexec xterm_title_preexec
 fi
 
-PS1='%F{5}%n@%m%f:%F{4}%~%F{6}${vcs_info_msg_0_}%f %# '
+if [[ $TERM == "dumb" ]];
+then
+    # needed for emacs tramp
+    unsetopt zle && PS1='$ ' && return
+else
+    PS1='%F{5}%n@%m%f:%F{4}%~%F{6}${vcs_info_msg_0_}%f %# '
+fi
 
 alias bioconda-install="conda install -c conda-forge -c bioconda "
 
