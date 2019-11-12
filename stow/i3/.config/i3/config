@@ -206,8 +206,8 @@ bindsym $mod+Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
 bindsym $mod+Escape exec "pkill dunst"
 
 # screen locker
-exec --no-startup-id xss-lock -n 'notify-send -u critical "IDLE: about to lock"' -l -- xsecurelock
-exec --no-startup-id xset s 1200 10
+exec --no-startup-id xscreensaver -no-splash
+exec --no-startup-id xss-lock -- xscreensaver-command -lock
 bindsym $mod+Shift+Escape exec xset s activate
 
 # power management
