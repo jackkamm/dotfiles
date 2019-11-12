@@ -200,7 +200,7 @@ bindsym XF86MonBrightnessUp exec "xbacklight -inc 10"
 bindsym XF86MonBrightnessDown exec "xbacklight -dec 10"
 
 # screenshot
-bindsym $mod+Print exec scrot -e 'mv $f /tmp/ && gimp /tmp/$f'
+bindsym $mod+Print exec scrot -e 'mv $f /tmp/ && krita /tmp/$f'
 
 ## kill notifactions
 bindsym $mod+Escape exec "pkill dunst"
