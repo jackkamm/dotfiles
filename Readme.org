@@ -3,7 +3,7 @@
 First, stow =stowrc=:
 
 #+begin_src sh
-  stow -R stowrc
+  stow --ignore='~' -R stowrc
 #+end_src
 
 #+RESULTS:
