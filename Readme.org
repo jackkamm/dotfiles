@@ -1,0 +1,25 @@
+* Initial setup
+
+First, stow =stowrc=:
+
+#+begin_src sh
+  stow -R stowrc
+#+end_src
+
+#+RESULTS:
+
+Then, stow the other common dotfiles:
+
+#+begin_src sh
+  stow -R common
+#+end_src
+
+#+RESULTS:
+
+* Includes from shell rc files
+
+The following example shows how to include =profile.sh= from =~/.zprofile=:
+
+#+begin_src sh :eval no :tangle ~/.zprofile
+  [[ -r ~/configs/profile.sh ]] && . ~/configs/profile.sh
+#+end_src
