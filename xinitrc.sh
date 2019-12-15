@@ -11,6 +11,15 @@ export SSH_AUTH_SOCK
 # requires package qt5-styleplugins
 export QT_QPA_PLATFORMTHEME=gtk2
 
+# xsecurelock
+XSET_LENGTH=600
+XSET_PERIOD=30
+# uncomment (or add to ~/.xinitrc) to use xscreensaver hacks
+#export XSECURELOCK_SAVER=saver_xscreensaver
+export XSECURELOCK_WAIT_TIME_MS="$XSET_PERIOD"000
+xset s "$XSET_LENGTH" "$XSET_PERIOD"
+xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
+
 ## increase trackpoint acceleration speed
 #xinput set-prop "TPPS/2 IBM TrackPoint" 299 1
 

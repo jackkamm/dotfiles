@@ -206,8 +206,6 @@ bindsym $mod+Print exec scrot -e 'mv $f /tmp/ && krita /tmp/$f'
 bindsym $mod+Escape exec "pkill dunst"
 
 # screen locker
-exec --no-startup-id xscreensaver -no-splash
-exec --no-startup-id xss-lock -- xscreensaver-command -lock
 bindsym $mod+Shift+Escape exec xset s activate
 
 # power management
