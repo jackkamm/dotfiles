@@ -187,9 +187,6 @@ bindsym $mod+p exec rofi-pass
 # window switcher
 bindsym $mod+Tab exec rofi -show window
 
-# reset xrandr (turn off external outputs)
-bindsym $mod+XF86Display exec "~/.screenlayout/default.sh"
-
 # volume and media player
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
 bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%; exec pactl set-sink-mute @DEFAULT_SINK@ 0
