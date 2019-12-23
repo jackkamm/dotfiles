@@ -3,6 +3,8 @@
 
 xterm*selectToClipboard: true
 
+!emacs.font: Source Code Pro-10
+
 !! URxvt config
 
 !! Set this in ~/.Xresources to accomodate different resolutions
