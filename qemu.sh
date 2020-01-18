@@ -40,6 +40,8 @@ else
 fi
 
 if [[ "$VM_ACTION" == "prepare" ]]; then
+    cpupower frequency-set -g performance
+
     echo "libvirt-qemu cset: Reserving CPUs $VIRT_CORES for VM $VM_NAME" > /dev/kmsg 2>&1
     shield_vm > /dev/kmsg 2>&1
 
@@ -51,6 +53,8 @@ if [[ "$VM_ACTION" == "prepare" ]]; then
 
     echo "libvirt-qemu cset: Successfully reserved CPUs $VIRT_CORES" > /dev/kmsg 2>&1
 elif [[ "$VM_ACTION" == "release" ]]; then
+    cpupower frequency-set -g powersave
+
     echo "libvirt-qemu cset: Releasing CPUs $VIRT_CORES from VM $VM_NAME" > /dev/kmsg 2>&1
     unshield_vm > /dev/kmsg 2>&1
 
