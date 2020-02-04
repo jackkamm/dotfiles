@@ -1,6 +1,12 @@
 ## source from .zshrc with:
 ## [[ -r /path/to/zshrc.zsh ]] && . /path/to/zshrc.zsh
 
+alias bioconda-install="conda install -c conda-forge -c bioconda "
+
+# https://unix.stackexchange.com/questions/258656/how-can-i-delete-to-a-slash-or-a-word-in-zsh
+autoload -U select-word-style
+select-word-style bash
+
 # prompt+git, see "man zshcontrib", /vcs_info
 setopt PROMPT_SUBST
 autoload -Uz vcs_info
@@ -29,12 +35,6 @@ then
 else
     PS1='%F{5}%n@%m%f:%F{4}%~%F{6}${vcs_info_msg_0_}%f %# '
 fi
-
-alias bioconda-install="conda install -c conda-forge -c bioconda "
-
-# https://unix.stackexchange.com/questions/258656/how-can-i-delete-to-a-slash-or-a-word-in-zsh
-autoload -U select-word-style
-select-word-style bash
 
 # The following lines were added by compinstall
 
