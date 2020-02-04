@@ -34,7 +34,7 @@ URxvt.keysym.M-s:           perl:keyboard-select:search
 URxvt.scrollBar: false
 ! Disable printing the terminal contents when pressing PrintScreen.
 URxvt.print-pipe: "cat > /dev/null"
-! Nice color for border (can't remove it when fontsize/pixels mismatch)
+! Nice border color (cannot remove it when fontsize/pixels mismatch)
 URxvt.borderColor: #222222
 
 !! prevents occasional giant mouse cursor bug in GTK
