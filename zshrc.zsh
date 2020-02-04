@@ -7,6 +7,10 @@ alias bioconda-install="conda install -c conda-forge -c bioconda "
 autoload -U select-word-style
 select-word-style bash
 
+function xrdb-urxvt {
+    xrdb -merge "$1" && pkill -HUP urxvt
+}
+
 # prompt+git, see "man zshcontrib", /vcs_info
 setopt PROMPT_SUBST
 autoload -Uz vcs_info

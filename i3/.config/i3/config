@@ -32,8 +32,6 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-# refresh urxvt colors
-bindsym $mod+x exec "xrdb ~/.Xresources; pkill -HUP urxvt"
 
 # kill focused window
 bindsym $mod+Shift+q kill
