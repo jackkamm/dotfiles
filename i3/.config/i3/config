@@ -180,7 +180,7 @@ for_window [window_role="task_dialog"] floating enable
 bindsym $mod+Shift+Return exec emacsclient -c
 
 # passmenu
-bindsym $mod+p exec rofi-pass
+bindsym $mod+p exec "passmenu --type"
 
 # window switcher
 bindsym $mod+Tab exec rofi -show window
