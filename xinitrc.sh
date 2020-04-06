@@ -16,6 +16,8 @@ XSET_LENGTH=600
 XSET_PERIOD=30
 # uncomment (or add to ~/.xinitrc) to use xscreensaver hacks
 #export XSECURELOCK_SAVER=saver_xscreensaver
+# prevents screen blanking/DPMS from stopping xscreensaver & music
+export XSECURELOCK_BLANK_TIMEOUT=-1
 export XSECURELOCK_WAIT_TIME_MS="$XSET_PERIOD"000
 xset s "$XSET_LENGTH" "$XSET_PERIOD"
 xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
