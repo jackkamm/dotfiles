@@ -208,7 +208,10 @@ bindsym $mod+Shift+Escape exec xset s activate
 exec --no-startup-id xfce4-power-manager
 
 # start some nice programs
-exec --no-startup-id compton
+
+# set opacity to 0 for zoom screensharing
+exec --no-startup-id picom -o 0
+
 exec --no-startup-id nm-applet
 #exec --no-startup-id blueman-applet
 exec --no-startup-id dropbox start
