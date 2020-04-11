@@ -1,0 +1,4 @@
+# override the "copiousoutput" setting in Arch's /etc/mailcap
+# This is needed to open html parts in firefox from notmuch
+# https://notmuchmail.org/emacstips/#index10h2
+text/html; /usr/bin/xdg-open %s
