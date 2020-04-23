@@ -1,10 +1,10 @@
-! original: https://gist.github.com/cqpx/1436584
+! originally based on https://gist.github.com/cqpx/1436584
 
 *background: #3f3f3f
 *foreground: #dcdccc
-*cursorColor: #aaaaaa
-*colorUL: #366060
-*underlineColor: #dfaf8f
+!*cursorColor: #aaaaaa
+!*colorUL: #366060
+!*underlineColor: #dfaf8f
 *color0: #3f3f3f
 *color1: #cc9393
 *color2: #7f9f7f
