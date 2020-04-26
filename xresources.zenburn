@@ -1,25 +1,39 @@
-! originally based on https://gist.github.com/cqpx/1436584
+! originally based on https://github.com/haldai/mydotfiles/blob/master/.Xresources
+! https://www.reddit.com/r/unixporn/comments/b4tdll/awesomewmzenburn_for_everything/
 
-*background: #3f3f3f
-*foreground: #dcdccc
-!*cursorColor: #aaaaaa
-!*colorUL: #366060
-!*underlineColor: #dfaf8f
-*color0: #3f3f3f
-*color1: #cc9393
-*color2: #7f9f7f
-*color3: #d0bf8f
-*color4: #6ca0a3
-*color5: #dc8cc3
-*color6: #93e0e3
-*color7: #dcdccc
-*color8: #000000
-*color9: #dca3a3
-*color10: #bfebbf
-*color11: #f0dfaf
-*color12: #8cd0d3
-*color13: #dc8cc3
-*color14: #93e0e3
-*color15: #ffffff
+*foreground:   #DCDCCC
+*background:   #3F3F3F
+
+! black
+*color0:       #3F3F3F
+*color8:       #7F7F7F
+
+! red
+*color1:       #CC9393
+*color9:       #9C6363
+
+! green
+*color2:       #7F9F7F
+*color10:      #5F7F5F
+
+! yellow
+*color3:       #F0DFAF
+*color11:      #D0BF8F
+
+! blue
+*color4:       #8CD0D3
+*color12:      #94BFF3
+
+! magenta
+*color5:       #DC8CC3
+*color13:      #CB7BB2
+
+! cyan
+*color6:       #93E0E3
+*color14:      #82CFD2
+
+! white
+*color7:       #DCDCCC
+*color15:      #FFFFEF
 
 Emacs.pane.menubar.foreground: black
