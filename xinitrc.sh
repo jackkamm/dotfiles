@@ -22,6 +22,10 @@ export XSECURELOCK_WAIT_TIME_MS="$XSET_PERIOD"000
 xset s "$XSET_LENGTH" "$XSET_PERIOD"
 xss-lock -n /usr/lib/xsecurelock/dimmer -l -- xsecurelock &
 
+## Use alternative screenlocker. Note the default xss-lock dimmer only
+## works on laptops with a backlight, not on desktops
+#xss-lock -n /usr/share/doc/xss-lock/dim-screen.sh -l -- gnome-screensaver-command -l &
+
 ## increase trackpoint acceleration speed
 #xinput set-prop "TPPS/2 IBM TrackPoint" 299 1
 
