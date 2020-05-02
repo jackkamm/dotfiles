@@ -3,6 +3,16 @@
 
 xterm*selectToClipboard: true
 
+! Fix R menu colors (e.g. install.packages()). R menus set the
+! background white, but don't set the foreground, which may lead to
+! illegible text if the *foreground is set in ~/.Xresources.
+! See also:
+! tk_select.list() in R tcltk built-in library
+! Tk FAQ (change default colors in Tk?):
+! https://www.jlab.org/coda/coda2.0/manuals/html/tcl/tclFAQ/tk/part1/faq-doc-62.html
+Tk*background: #FFFFFF
+Tk*foreground: #000000
+
 !emacs.font: Source Code Pro-10
 
 !! URxvt config
