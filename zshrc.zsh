@@ -6,6 +6,8 @@ alias grep='grep --color=auto'
 
 alias bioconda-install="conda install -c conda-forge -c bioconda "
 
+export CONDA_AUTO_ACTIVATE_BASE=false
+
 # https://unix.stackexchange.com/questions/258656/how-can-i-delete-to-a-slash-or-a-word-in-zsh
 autoload -U select-word-style
 select-word-style bash
