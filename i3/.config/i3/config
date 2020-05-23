@@ -168,8 +168,17 @@ bindsym $mod+Shift+period move workspace to output right
 bindsym $mod+comma move workspace to output up
 bindsym $mod+period move workspace to output down
 
+# Make the currently focused window a scratchpad
+bindsym $mod+Shift+minus move scratchpad
+
+# Show the first scratchpad window
+bindsym $mod+minus scratchpad show
+
 # rename workspace
 bindsym $mod+n exec i3-input -F 'rename workspace to "%s"' -P 'New name: '
+
+## Show the sup-mail scratchpad window, if any.
+#bindsym mod4+s [title="^Sup ::"] scratchpad show
 
 # Correct handling of floating dialogs
 # https://wiki.archlinux.org/index.php/I3#Correct_handling_of_floating_dialogs
