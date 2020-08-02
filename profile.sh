@@ -24,11 +24,10 @@ if [ -d "$ENVIRONMENTD" ]; then
         . "$conf"
     done
 fi
-# https://wiki.archlinux.org/index.php/Systemd/User#PATH
-# Needed in case systemd ignores/overwrites PATH (e.g. on EC2 Ubuntu 18.04)
-systemctl --user import-environment PATH
-
 set +a
+# NOTE: on Ubuntu PATH may get clobbered by /etc/environment, which is
+# symlinked to /usr/lib/environment.d/99-environment.conf.  To prevent
+# this, give config files a higher priority, e.g. 990-env.conf
 
 # prevent rofi-pass using whoami as default value of "user"
 export ROFI_PASS_DEFAULT_USER=""
