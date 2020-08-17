@@ -54,6 +54,8 @@ URxvt.borderColor: #222222
 
 !! keybindings for terminal emacs in urxvt
 !! see also: https://github.com/CyberShadow/term-keys
+!! Manually disabled keys:
+!! - M-Left/Right: because it messes up weechat
 URxvt.keysym.C-grave: string:*b
 URxvt.keysym.S-C-grave: string:*c
 URxvt.keysym.C-M-grave: string:*f
@@ -230,12 +232,12 @@ URxvt.keysym.S-M-Down: string:T%
 URxvt.keysym.C-M-Down: string:T&
 URxvt.keysym.S-C-M-Down: string:T'
 URxvt.keysym.S-C-Left: string:Tc
-URxvt.keysym.M-Left: string:Td
+!URxvt.keysym.M-Left: string:Td
 URxvt.keysym.S-M-Left: string:Te
 URxvt.keysym.C-M-Left: string:Tf
 URxvt.keysym.S-C-M-Left: string:Tg
 URxvt.keysym.S-C-Right: string:UC
-URxvt.keysym.M-Right: string:UD
+!URxvt.keysym.M-Right: string:UD
 URxvt.keysym.S-M-Right: string:UE
 URxvt.keysym.C-M-Right: string:UF
 URxvt.keysym.S-C-M-Right: string:UG
