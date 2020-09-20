@@ -186,6 +186,7 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [class="org-broad-igv-ui-Main"] floating enable
 for_window [title="Secure CRAN mirrors"] floating enable
+for_window [class="zoom"] floating enable
 
 # emacsclient
 bindsym $mod+Shift+Return exec emacsclient -c
@@ -220,8 +221,9 @@ exec --no-startup-id xfce4-power-manager
 
 # start some nice programs
 
-# set opacity to 0 for zoom screensharing
-exec --no-startup-id picom -o 0
+# zoom's recommended xcompmgr invocation
+# https://support.zoom.us/hc/en-us/articles/202082128-Black-Screen-During-Screen-Sharing
+exec --no-startup-id xcompmgr -c -l0 -t0 -r0 -o.00
 
 exec --no-startup-id nm-applet
 #exec --no-startup-id blueman-applet
