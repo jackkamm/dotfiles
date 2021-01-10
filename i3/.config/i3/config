@@ -216,9 +216,6 @@ bindsym $mod+Escape exec "pkill dunst"
 # screen locker
 bindsym $mod+Shift+Escape exec xscreensaver-command -lock
 
-# power management
-exec --no-startup-id xfce4-power-manager
-
 # start some nice programs
 
 # zoom's recommended xcompmgr invocation

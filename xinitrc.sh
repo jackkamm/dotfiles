@@ -14,6 +14,8 @@ export QT_QPA_PLATFORMTHEME=gtk2
 ## uncomment to start xscreensaver
 ##xscreensaver &
 
+#xfce4-power-manager &
+
 ## increase trackpoint acceleration speed
 #xinput set-prop "TPPS/2 IBM TrackPoint" 299 1
 
