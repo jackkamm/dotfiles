@@ -187,6 +187,7 @@ for_window [window_role="task_dialog"] floating enable
 for_window [class="org-broad-igv-ui-Main"] floating enable
 for_window [title="Secure CRAN mirrors"] floating enable
 for_window [class="zoom"] floating enable
+for_window [title="Speedbar"] floating enable
 
 # emacsclient
 bindsym $mod+Shift+Return exec emacsclient -c
