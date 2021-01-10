@@ -3,6 +3,6 @@ set -x
 
 WIN_ID=$(xdotool getwindowfocus)
 WIN_CLASS=$(xprop -id "$WIN_ID" WM_CLASS | awk '{print $4}' | sed -r 's/^"|"$//g')
-OUTFILE="$HOME/share/personal/screenshots/"$(date +'%Y/%m-%d_%H:%M:%S_')"$WIN_CLASS"".png"
+OUTFILE="$HOME/Sync/screenshots/"$(date +'%Y/%m-%d_%H:%M:%S_')"$WIN_CLASS"".png"
 mkdir -p $(dirname "$OUTFILE")
 scrot "$@" "$OUTFILE"
