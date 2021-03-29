@@ -50,4 +50,5 @@ URxvt.borderColor: #222222
 !! prevents occasional giant mouse cursor bug in GTK
 !Xcursor.size: 24
 
-!! For colors, use https://github.com/solarized/xresources
+!! For colors, use https://github.com/tlatsas/xcolors
+!#include "src/xcolors/themes/simple_rainbow"
