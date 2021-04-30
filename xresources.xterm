@@ -7,3 +7,6 @@ XTerm.ttyModes: erase ^?
 
 !XTerm.vt100.faceName: DejaVu Sans Mono
 !XTerm.vt100.faceSize: 11
+
+*VT100*translations:    #override \n\
+    Meta<Key>]:  insert-selection(CLIPBOARD, CUT_BUFFER1) 
