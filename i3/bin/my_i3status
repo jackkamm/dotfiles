@@ -1,0 +1,40 @@
+#!/usr/bin/python3
+
+from math import floor
+from datetime import datetime, timedelta
+from subprocess import CalledProcessError, Popen, PIPE, run
+
+def get_last_backup_status():
+    try:
+        proc = run(["systemctl", "--user", "show",
+                    "backup.service"],
+                   capture_output=True, check=True)
+
+        status_dict = {}
+        for line in proc.stdout.decode().strip().split("\n"):
+            k, v = line.split("=", maxsplit=1)
+            status_dict[k] = v
+
+        result = status_dict["Result"].upper()
+        errno = status_dict["StatusErrno"]
+        interval = datetime.now() - datetime.strptime(
+            status_dict["ExecMainExitTimestamp"],
+            "%a %Y-%m-%d %H:%M:%S %Z"
+        )
+        hours = floor(interval.total_seconds() / 3600)
+
+        return f"{errno}/{result} {hours}h"
+    except:
+        return "??????"
+
+backup_status_freq = timedelta(hours=1)
+last_backup_status = get_last_backup_status()
+last_backup_check = datetime.now()
+
+with Popen(["i3status"], stdout=PIPE) as proc:
+    for line in proc.stdout:
+        if datetime.now() - last_backup_check > backup_status_freq:
+            last_backup_status = get_last_backup_status()
+            last_backup_check = datetime.now()
+        print("backup:", last_backup_status, "|", line.decode().strip(), flush=True)
+
