@@ -3,3 +3,5 @@
 # Avoid occasional warning when calling "xterm screen":
 # "Aborted because of window size change"
 startup_message off
+
+term screen-256color
