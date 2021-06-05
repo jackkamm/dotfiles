@@ -33,7 +33,7 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec urxvt
-bindsym $mod+Return exec xterm screen
+bindsym $mod+Return exec xterm || i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -156,7 +156,7 @@ bindsym $mod+r mode "resize"
 bar {
         tray_output primary
         i3bar_command i3bar
-        status_command my_i3status
+        status_command my_i3status || i3status
 }
 
 focus_follows_mouse no
