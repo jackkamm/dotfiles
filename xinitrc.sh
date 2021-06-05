@@ -14,8 +14,15 @@ export QT_QPA_PLATFORMTHEME=gtk2
 ## uncomment to start xscreensaver
 ##xscreensaver &
 
+## dbus-daemon maintainers explicitly warn against relying on autostart
+## https://wiki.archlinux.org/title/Dunst
+#dunst &
+
 ## increase trackpoint acceleration speed
 #xinput set-prop "TPPS/2 IBM TrackPoint" 299 1
+
+## increase trackpad seed on pinebookpro
+#xinput set-prop "HAILUCK CO.,LTD USB KEYBOARD Touchpad" 272 0.5
 
 ## replace trackpad middle click
 ## https://www.linuxquestions.org/questions/linux-newbie-8/how-to-disable-middle-click-button-on-etps-2-elantech-touchpad-4175619712/
