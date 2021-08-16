@@ -195,7 +195,7 @@ for_window [title="Speedbar"] floating enable
 bindsym $mod+Shift+Return exec emacsclient -c
 
 # passmenu
-bindsym $mod+p exec "passmenu --type"
+bindsym $mod+p exec "rofi-pass"
 
 ## window switcher
 #bindsym $mod+Tab exec rofi -show window
