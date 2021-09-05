@@ -15,38 +15,6 @@ Tk*foreground: #000000
 
 !emacs.font: Source Code Pro-10
 
-!! URxvt config
-
-!! Set this in ~/.Xresources to accomodate different resolutions
-!URxvt.font: xft:DejaVu Sans Mono:size=11
-!URxvt.font: xft:Source Code Pro:size=11
-
-! URxvt extensions
-! https://wiki.archlinux.org/index.php/Rxvt-unicode#Perl_extensions
-! matcher: for url-selection (included with urxvt 9.21)
-! selection-to-clipboard: copy PRIMARY to CLIPBOARD automatically (included with urxvt 9.20)
-! keyboard-select: select with keyboard (included with urxvt-perls; in official arch repos)
-! config-reload: https://github.com/regnarg/urxvt-config-reload
-URxvt.perl-ext-common:      default,matcher,selection-to-clipboard,keyboard-select,config-reload
-!URxvt.perl-ext-common:      default,matcher,selection-to-clipboard,keyboard-select
-
-! url selection
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
-URxvt.keysym.C-Delete: perl:matcher:last
-URxvt.keysym.M-Delete: perl:matcher:list
-! keyboard selection
-URxvt.keysym.M-Escape:      perl:keyboard-select:activate
-URxvt.keysym.M-s:           perl:keyboard-select:search
-! seems like this is not needed when selection-to-clipboard enabled:
-!URxvt.keyboard-select.clipboard: true
-
-URxvt.scrollBar: false
-! Disable printing the terminal contents when pressing PrintScreen.
-URxvt.print-pipe: "cat > /dev/null"
-! Nice border color (cannot remove it when fontsize/pixels mismatch)
-URxvt.borderColor: #222222
-
 !! prevents occasional giant mouse cursor bug in GTK
 !Xcursor.size: 24
 
