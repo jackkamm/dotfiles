@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# FIXME: Programs launched from an emacs daemon started by systemd
+# won't survive killing of the daemon.
+
+nohup xdg-open "$1" &> /dev/null &
