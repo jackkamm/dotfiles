@@ -3,3 +3,5 @@
 	name = Jack Kamm
 [diff "lisp"]
         xfuncname = "^(\\(.*)$"
+[credential]
+	helper = cache
