@@ -39,7 +39,7 @@ fi
 #exec xterm -geometry 80x66+0+0 -name login
 
 #export XSECURELOCK_SAVER=saver_xscreensaver
-. $HOME/dotfiles/xinitrc.sh
+. $HOME/.config/include/xinitrc.sh
 xscreensaver &
 
 # make sure we have a primary output for the i3 tray
