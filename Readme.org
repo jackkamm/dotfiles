@@ -1,3 +1,3 @@
 My personal dotfiles, managed with git and stow. Use the wrapper
-scripts =stow-home.sh= and =unstow-home.sh= to stow and unstow
+scripts =stow-home.bash= and =unstow-home.bash= to stow and unstow
 dotfiles.

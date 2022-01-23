@@ -11,7 +11,7 @@ set -euo pipefail
     print_include ~/.config/include/zshrc.zsh >> ~/.zshrc
     echo "Appended to .bash_profile, .zprofile, .bashrc, .zshrc."
 
-    ./stow-home.sh common
+    ./stow-home.bash common
     echo "Stowed common dotfiles."
 
     echo "Done."

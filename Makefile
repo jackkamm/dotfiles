@@ -4,4 +4,4 @@ setup-shell:
 	./setup-shell.bash
 
 setup-emacs-daemon:
-	./setup-emacs-daemon.sh
+	./setup-emacs-daemon.bash
