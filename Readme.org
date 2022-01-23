@@ -1,3 +1,6 @@
-My personal dotfiles, managed with git and stow. Use the wrapper
-scripts =stow-home.bash= and =unstow-home.bash= to stow and unstow
-dotfiles.
+My personal dotfiles, managed with git and stow.
+
+Run =setup-shell.bash= to setup my core Unix shell environment.
+
+Use the wrapper scripts =stow-home.bash= and =unstow-home.bash= to
+stow and unstow sets of dotfiles.
