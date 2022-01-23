@@ -1,11 +1,17 @@
+!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-light-256.Xresources"
+!#include "/home/jack/.base16-manager/chriskempson/base16-xresources/xresources/base16-solarized-dark-256.Xresources"
+
+Xft.dpi: 192
+!Xcursor.size:  48
+
+!alternatively can put in .config/rofi/config
+rofi.dpi: 192
+rofi.theme: /usr/share/rofi/themes/lb.rasi
+
 #include ".config/include/xresources.xresources"
 #include ".config/include/xresources.xterm"
-!#include ".config/include/xresources.urxvt"
-
-!URxvt.font: xft:Source Code Pro:size=12
-!!emacs.font: Source Code Pro-12
-!
-!XTerm.vt100.faceName: DejaVu Sans Mono
-!XTerm.vt100.faceSize: 11
-
 #include ".config/include/xresources.zenburn"
+
+!XTerm.vt100.faceName: DejaVu Sans Mono
+XTerm.vt100.faceName: Fantasque Sans Mono
+XTerm.vt100.faceSize: 10

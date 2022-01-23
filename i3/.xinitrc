@@ -32,13 +32,26 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-#twm &
-#xclock -geometry 50x50-1+1 &
-#xterm -geometry 80x50+494+51 &
-#xterm -geometry 80x20+494-0 &
-#exec xterm -geometry 80x66+0+0 -name login
+#exec gnome-session
 
-. $HOME/dotfiles/xinitrc.sh
+xrandr --dpi 192
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+#xrandr --output eDP1 --scale 0.5x0.5
+
+
+#exec startkde
+#exec startxfce4
+#exec startlxqt
+
+## bug? need to call "xrandr" without arguments before setting resolution
+#xrandr
+#xrandr --output eDP1 --mode 1280x800
+
+. /home/jack/dotfiles/xinitrc.sh
 xscreensaver &
 
 exec i3
+
+#setxkbmap -option ctrl:swapcaps
