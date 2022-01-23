@@ -1,6 +1,6 @@
 #!/bin/sh
 
-./install.sh emacsclient-desktop
+./stow-home.sh emacsclient-desktop
 
 systemctl --user enable --now emacs.service
 

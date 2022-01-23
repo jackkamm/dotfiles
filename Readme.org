@@ -1,2 +1,3 @@
 My personal dotfiles, managed with git and stow. Use the wrapper
-scripts =install.sh= and =uninstall.sh= to stow and unstow dotfiles.
+scripts =stow-home.sh= and =unstow-home.sh= to stow and unstow
+dotfiles.
