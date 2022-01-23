@@ -1,1 +1,1 @@
-[[ -r ~/dotfiles/zshrc.zsh ]] && . ~/dotfiles/zshrc.zsh
+[[ -r ~/.config/include/zshrc.zsh ]] && . ~/.config/include/zshrc.zsh

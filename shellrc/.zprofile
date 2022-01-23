@@ -1,1 +1,1 @@
-[[ -r ~/dotfiles/profile.sh ]] && . ~/dotfiles/profile.sh
+[[ -r ~/.config/include/profile.sh ]] && . ~/.config/include/profile.sh
