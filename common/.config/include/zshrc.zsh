@@ -1,8 +1,8 @@
 ## source from .zshrc with:
 ## [[ -r /path/to/zshrc.zsh ]] && . /path/to/zshrc.zsh
 
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
+#alias ls='ls --color=auto'
+#alias grep='grep --color=auto'
 
 alias bioconda-install="conda install -c conda-forge -c bioconda "
 
