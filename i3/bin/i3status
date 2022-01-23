@@ -1,0 +1,97 @@
+#!/usr/bin/python3
+#
+# See also:
+# https://faq.i3wm.org/question/459/external-scriptsprograms-in-i3status-without-loosing-colors/index.html
+# http://code.stapelberg.de/git/i3status/tree/contrib/wrapper.py
+
+import json
+from math import floor
+from datetime import datetime, timedelta
+from subprocess import CalledProcessError, Popen, PIPE, run
+
+## green
+#good_color = "#00FF00"
+
+# white
+good_color = "#FFFFFF"
+
+# yellow
+warn_color = "#FFFF00"
+
+class ServiceStatus:
+    def __init__(self, service, user=False,
+                 check_freq=timedelta(hours=1),
+                 warn_hours=24):
+        self.cmd = ["systemctl"]
+        if user:
+            self.cmd.append("--user")
+        self.cmd.extend(["show", service])
+
+        self.check_freq = check_freq
+        self.warn_hours = warn_hours
+
+        self.update_status()
+
+
+    
+    def update_status(self):
+        self.last_checked = datetime.now()
+        try:
+            proc = run(self.cmd,
+                    capture_output=True, check=True)
+
+            status_dict = {}
+            for line in proc.stdout.decode().strip().split("\n"):
+                k, v = line.split("=", maxsplit=1)
+                status_dict[k] = v
+
+            result = status_dict["Result"].upper()
+            errno = status_dict["StatusErrno"]
+            interval = datetime.now() - datetime.strptime(
+                status_dict["ExecMainExitTimestamp"],
+                "%a %Y-%m-%d %H:%M:%S %Z"
+            )
+            hours = floor(interval.total_seconds() / 3600)
+
+            if errno == "0" and hours < self.warn_hours:
+                self.color = good_color
+            else:
+                self.color = warn_color
+
+            self.status = f"{errno}/{result} {hours}h"
+        except:
+            self.status = "??????"
+            self.color = warn_color
+
+    def get_status(self):
+        if datetime.now() - self.last_checked > self.check_freq:
+            self.update_status()
+        return self.status
+
+service_status_list = {
+    "bak-inner": ServiceStatus("backup-inner.service", user=True),
+    "bak-basic": ServiceStatus("backup-basic.service"),
+}
+
+with Popen(["/usr/bin/i3status"], stdout=PIPE) as proc:
+    # Print first 2 lines, containing the version header and start of
+    # the infinite array
+    for _ in range(2):
+        print(proc.stdout.readline().decode().strip(), flush=True)
+
+    for line in proc.stdout:
+        line, prefix = line.decode().strip(), ''
+
+        # handle comma at start of line
+        if line.startswith(','):
+            line, prefix = line[1:], ','
+
+        j = json.loads(line)
+
+        for k, v in service_status_list.items():
+            j.insert(0, {"full_text": "{}: {}".format(k, v.get_status()),
+                         "name": k,
+                         "color": v.color})
+
+        print(prefix+json.dumps(j), flush=True)
+
