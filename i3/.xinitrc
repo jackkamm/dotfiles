@@ -38,7 +38,11 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
+#export XSECURELOCK_SAVER=saver_xscreensaver
 . $HOME/dotfiles/xinitrc.sh
 xscreensaver &
+
+# make sure we have a primary output for the i3 tray
+xrandr --output HDMI1 --primary
 
 exec i3
