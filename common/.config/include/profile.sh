@@ -27,7 +27,9 @@ fi
 set +a
 # NOTE: on Ubuntu PATH may get clobbered by /etc/environment, which is
 # symlinked to /usr/lib/environment.d/99-environment.conf.  To prevent
-# this, give config files a higher priority, e.g. 990-env.conf
+# this, give config files a higher priority,
+# e.g. 990-env.conf. Alternatively, mask the offending config file by
+# creating one with the same name, see man environment.d(5).
 
 # prevent rofi-pass using whoami as default value of "user"
 export ROFI_PASS_DEFAULT_USER=""
