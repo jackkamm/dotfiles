@@ -2,10 +2,10 @@
 #include ".config/include/xresources.xterm"
 !#include ".config/include/xresources.urxvt"
 
-!URxvt.font: xft:Source Code Pro:size=12
-!!emacs.font: Source Code Pro-12
-!
-!XTerm.vt100.faceName: DejaVu Sans Mono
-!XTerm.vt100.faceSize: 11
+URxvt.font: xft:Source Code Pro:size=12
+!emacs.font: Source Code Pro-12
+
+XTerm.vt100.faceName: DejaVu Sans Mono
+XTerm.vt100.faceSize: 11
 
 #include ".config/include/xresources.zenburn"
