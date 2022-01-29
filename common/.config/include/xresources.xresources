@@ -1,8 +1,3 @@
-! include this in ~/.Xresources like so:
-! #include "path/to/xresources.xresources"
-
-xterm*selectToClipboard: true
-
 ! Fix R menu colors (e.g. install.packages()). R menus set the
 ! background white, but don't set the foreground, which may lead to
 ! illegible text if the *foreground is set in ~/.Xresources.
