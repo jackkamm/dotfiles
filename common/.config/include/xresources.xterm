@@ -9,4 +9,5 @@ XTerm.ttyModes: erase ^?
 !XTerm.vt100.faceSize: 11
 
 *VT100*translations:    #override \n\
-    Meta<Key>]:  insert-selection(CLIPBOARD, CUT_BUFFER1) 
+    Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
