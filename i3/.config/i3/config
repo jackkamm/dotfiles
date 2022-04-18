@@ -220,7 +220,7 @@ bindsym $mod+Escape exec "pkill dunst"
 bindsym $mod+Shift+Escape exec xscreensaver-command -lock
 
 ## power management
-#exec --no-startup-id xfce4-power-manager
+exec --no-startup-id xfce4-power-manager
 
 # start some nice programs
 
