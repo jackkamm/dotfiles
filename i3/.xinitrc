@@ -43,6 +43,7 @@ fi
 xscreensaver &
 
 # make sure we have a primary output for the i3 tray
-xrandr --output HDMI1 --primary
+#xrandr --output HDMI1 --primary
+xrandr --output DP-2 --primary
 
 exec i3
