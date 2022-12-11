@@ -244,7 +244,11 @@ exec --no-startup-id xcompmgr -c -l0 -t0 -r0 -o.00
 
 #exec --no-startup-id nm-applet
 #exec --no-startup-id blueman-applet
-exec --no-startup-id syncthing-gtk -m
+
+# 2022-07-16: syncthing-gtk broke after updating today.
+# TODO Switch to i3pystatus syncthing module?
+#exec --no-startup-id syncthing-gtk -m
+
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
 exec --no-startup-id redshift-gtk
 # kde connect
