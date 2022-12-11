@@ -4,4 +4,4 @@
 # "Aborted because of window size change"
 startup_message off
 
-term screen-256color
+#term screen-256color
