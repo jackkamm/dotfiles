@@ -242,7 +242,7 @@ exec --no-startup-id xfce4-power-manager
 # https://support.zoom.us/hc/en-us/articles/202082128-Black-Screen-During-Screen-Sharing
 exec --no-startup-id xcompmgr -c -l0 -t0 -r0 -o.00
 
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 #exec --no-startup-id blueman-applet
 exec --no-startup-id syncthing-gtk -m
 exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
