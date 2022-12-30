@@ -15,8 +15,13 @@ set $mod Mod4
 # is used in the bar {} block below.
 #font pango:monospace 8
 
-# This font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
+# This font is widely installed, provides lots of unicode glyphs,
+# right-to-left text rendering and scalability on retina/hidpi
+# displays (thanks to pango).
+#
+# HINT: If i3 starts up with unreadable glyphs, try installing
+# ttf-dejavu
+
 #font pango:DejaVu Sans Mono 8
 font pango:DejaVu Sans Mono 10
 default_border normal 5
