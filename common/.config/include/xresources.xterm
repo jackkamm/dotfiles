@@ -10,4 +10,5 @@ XTerm.ttyModes: erase ^?
 
 *VT100*translations:    #override \n\
     Shift Ctrl <Key> C: copy-selection(CLIPBOARD) \n\
-    Shift Ctrl <Key> V: insert-selection(CLIPBOARD)
+    Shift Ctrl <Key> V: insert-selection(CLIPBOARD) \n\
+    Alt <Key>Return: insert()
