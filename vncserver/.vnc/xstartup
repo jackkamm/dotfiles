@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Are these 2 lines still needed when starting vncserver via the
+# modern systemd method?
 unset SESSION_MANAGER
 unset DBUS_SESSION_BUS_ADDRESS
+
 openbox
