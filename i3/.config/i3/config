@@ -210,7 +210,7 @@ bindsym XF86MonBrightnessUp exec "brightnessctl set +10%"
 bindsym XF86MonBrightnessDown exec "brightnessctl set 10%-"
 
 # screenshot
-bindsym $mod+Print exec screenshot -e 'krita $f'
+bindsym $mod+F8 exec screenshot -e 'krita $f'
 bindsym $mod+Shift+Print exec screenshot -u -e 'cat $f | xclip -selection clipboard -t image/png'
 
 ## kill notifactions
