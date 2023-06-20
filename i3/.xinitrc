@@ -40,4 +40,10 @@ fi
 
 . $HOME/.config/include/xinitrc.sh
 
+# make sure we have a primary output for the i3 tray
+#xrandr --output DP-0 --primary
+#xrandr --output DP-2 --primary
+#xrandr --output DP-4 --primary
+#autorandr --change
+
 exec i3
