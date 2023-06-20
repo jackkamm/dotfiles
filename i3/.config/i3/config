@@ -241,11 +241,17 @@ bindsym $mod+Shift+Escape exec xscreensaver-command -lock
 # power management
 exec --no-startup-id xfce4-power-manager
 
-# start some nice programs
+# Compositing
 
-# zoom's recommended xcompmgr invocation
+# zoom screensharing might require xcompmgr:
 # https://support.zoom.us/hc/en-us/articles/202082128-Black-Screen-During-Screen-Sharing
-exec --no-startup-id xcompmgr -c -l0 -t0 -r0 -o.00
+#exec --no-startup-id xcompmgr -c -l0 -t0 -r0 -o.00
+
+# picom can help with nvidia screen tearing
+# https://wiki.archlinux.org/title/Picom#Screentearing_with_NVIDIA's_proprietary_drivers
+exec --no-startup-id picom -b
+
+# start some nice programs
 
 exec --no-startup-id nm-applet
 #exec --no-startup-id blueman-applet
