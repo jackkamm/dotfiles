@@ -249,7 +249,8 @@ exec --no-startup-id xfce4-power-manager
 
 # picom can help with nvidia screen tearing
 # https://wiki.archlinux.org/title/Picom#Screentearing_with_NVIDIA's_proprietary_drivers
-exec --no-startup-id picom -b
+#exec --no-startup-id picom -b
+#exec --no-startup-id picom
 
 # start some nice programs
 
@@ -268,4 +269,5 @@ exec --no-startup-id xscreensaver
 
 # set main display as primary for the toolbar icon area
 # (could i use xrandr --auto instead?)
+# may need to set the default using autorandr --default?
 exec --no-startup-id autorandr --change
