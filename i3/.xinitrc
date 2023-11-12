@@ -39,6 +39,5 @@ fi
 #exec xterm -geometry 80x66+0+0 -name login
 
 . $HOME/.config/include/xinitrc.sh
-xscreensaver &
 
 exec i3

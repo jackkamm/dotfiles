@@ -17,6 +17,8 @@ function xrdb-urxvt {
 }
 
 # prompt+git, see "man zshcontrib", /vcs_info
+# NOTE: If there's hanging at the prompt, try interrupting with
+# Control-C, then do "git status" to rebuild the index
 setopt PROMPT_SUBST
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' check-for-changes true
