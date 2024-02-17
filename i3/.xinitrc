@@ -50,7 +50,6 @@ export GDK_DPI_SCALE=0.5
 #xrandr --output eDP1 --mode 1280x800
 
 . $HOME/.config/include/xinitrc.sh
-xscreensaver &
 
 exec i3
 
