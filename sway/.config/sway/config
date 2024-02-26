@@ -215,3 +215,7 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+input type:keyboard {
+  xkb_options ctrl:swapcaps
+}
