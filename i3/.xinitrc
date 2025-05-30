@@ -38,12 +38,26 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
+# U4025QW has PPI of 140. But by default Xorg uses DPI of 70.
+# https://www.dell.com/en-us/shop/dell-ultrasharp-40-curved-thunderbolt-hub-monitor-u4025qw/apd/210-bmdp/monitors-monitor-accessories
+xrandr --dpi 140
+
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_ENABLE_HIGHDPI_SCALING=1
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+
 . $HOME/.config/include/xinitrc.sh
 
 # make sure we have a primary output for the i3 tray
 #xrandr --output DP-0 --primary
+#xrandr --output DP-1 --primary
 #xrandr --output DP-2 --primary
 #xrandr --output DP-4 --primary
-#autorandr --change
+
+# if this doesn't do anything, check if autorandr --detected returns
+# anything. If not, run autorandr --save to make sure it has a
+# detectable config.
+autorandr --change
 
 exec i3
