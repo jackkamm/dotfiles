@@ -271,3 +271,5 @@ exec --no-startup-id xscreensaver
 # (could i use xrandr --auto instead?)
 # may need to set the default using autorandr --default?
 exec --no-startup-id autorandr --change
+
+exec --no-startup-id joystickwake
