@@ -159,3 +159,6 @@ caption always "%3n %t%? @%u%?%? [%h]%?%=%c"
 maptimeout 5
 
 term screen-256color
+
+layout new
+layout autosave on
