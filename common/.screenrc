@@ -157,3 +157,8 @@ caption always "%3n %t%? @%u%?%? [%h]%?%=%c"
 # https://vim.fandom.com/wiki/GNU_Screen_integration#Getting_the_Esc_key_to_work
 # https://unix.stackexchange.com/questions/8439/gnu-screen-makes-vim-esc-key-slow
 maptimeout 5
+
+term screen-256color
+
+layout new
+layout autosave on
