@@ -1,2 +1,8 @@
-tint2 &
-nextcloud &
+
+# Commands skipped often resolved by addition of small delays
+# https://wiki.archlinux.org/title/Openbox
+(sleep 3s && tint2) &
+
+# Not needed because of
+# ~/.config/autostart/com.nextcloud.desktopclient.nextcloud.desktop
+#nextcloud &
