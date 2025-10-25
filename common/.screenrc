@@ -36,7 +36,8 @@ defscrollback 1000
 # zombie "^["
 
 # enable support for the "alternate screen" capability in all windows
-# altscreen on
+# (IOW: allow screen clearing to work properly for ncurses programs like less)
+altscreen on
 
 ################
 #
