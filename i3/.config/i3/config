@@ -249,7 +249,7 @@ exec --no-startup-id xfce4-power-manager
 
 # picom can help with nvidia screen tearing
 # https://wiki.archlinux.org/title/Picom#Screentearing_with_NVIDIA's_proprietary_drivers
-#exec --no-startup-id picom -b
+exec --no-startup-id picom -b
 #exec --no-startup-id picom
 
 # start some nice programs
