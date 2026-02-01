@@ -16,7 +16,8 @@ set $right l
 # Your preferred terminal emulator
 set $term foot
 # Your preferred application launcher
-set $menu wmenu-run
+#set $menu wmenu-run
+set $menu "rofi -combi-modi window,run,drun -show combi -modi combi"
 
 ### Output configuration
 #
@@ -41,6 +42,16 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
+# https://forum.endeavouros.com/t/suspend-desktop-pc-in-sway/60228
+exec swayidle -w \
+         timeout 600 'swaylock -f -c 000000' \
+         idlehint 1800 \
+         before-sleep 'swaylock -f -c 000000'
+
+bindsym $mod+Shift+Escape exec swaylock -f -c 000000
+
+for_window [app_id="firefox"] inhibit_idle fullscreen
 
 ### Input configuration
 #
@@ -161,6 +172,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
+
+    focus_follows_mouse no
+
 #
 # Scratchpad:
 #
@@ -211,6 +225,12 @@ bindsym $mod+r mode "resize"
     # Special key to take a screenshot with grim
     bindsym Print exec grim
 
+# emacsclient
+bindsym $mod+Shift+Return exec emacsclient -c
+
+# passmenu
+bindsym $mod+p exec "rofi-pass"
+
 #
 # Status Bar:
 #
@@ -230,3 +250,15 @@ bar {
 }
 
 include /etc/sway/config.d/*
+
+# display settings saved by nwg-displays
+include ~/.config/sway/outputs
+
+# start some nice programs
+
+# kde connect
+exec --no-startup-id /usr/bin/kdeconnectd
+# clicking indicator seems broken in swaybar
+#exec --no-startup-id kdeconnect-indicator
+
+exec --no-startup-id nextcloud
