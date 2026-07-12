@@ -6,7 +6,8 @@
 # desktop=sandbox
 # geometry=2000x1200
 
-session=openbox
+#session=openbox
+session=xfce
 geometry=1024x768
 localhost
 alwaysshared
