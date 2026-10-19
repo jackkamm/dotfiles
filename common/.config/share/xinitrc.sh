@@ -11,6 +11,12 @@ export SSH_AUTH_SOCK
 # requires package qt5-styleplugins
 export QT_QPA_PLATFORMTHEME=gtk2
 
+# https://faq.i3wm.org/question/3410/wm-shortcuts-ignored-in-virtual-machine.1.html
+export SPICE_NOGRAB=1
+
+# prevent rofi-pass using whoami as default value of "user"
+export ROFI_PASS_DEFAULT_USER=""
+
 ## uncomment to start xscreensaver
 ##xscreensaver &
 
@@ -27,9 +33,3 @@ export QT_QPA_PLATFORMTHEME=gtk2
 ## replace trackpad middle click
 ## https://www.linuxquestions.org/questions/linux-newbie-8/how-to-disable-middle-click-button-on-etps-2-elantech-touchpad-4175619712/
 #xinput set-button-map "SynPS/2 Synaptics TouchPad" 1 1 3 4 5 6 7
-
-# https://faq.i3wm.org/question/3410/wm-shortcuts-ignored-in-virtual-machine.1.html
-export SPICE_NOGRAB=1
-
-# prevent rofi-pass using whoami as default value of "user"
-export ROFI_PASS_DEFAULT_USER=""

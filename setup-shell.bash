@@ -9,7 +9,7 @@ set -euo pipefail
     print_include ~/.config/share/environment.sh >> ~/.zprofile
     print_include ~/.config/share/environment.sh >> ~/.xprofile
 
-    print_include ~/.config/share/bashrc.bash >> ~/.bashrc
+    print_include ~/.config/share/bash_prompt.bash >> ~/.bashrc
     print_include ~/.config/share/zshrc.zsh >> ~/.zshrc
     echo "Appended to .bash_profile, .zprofile, .xprofile, .bashrc, .zshrc."
 

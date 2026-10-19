@@ -1,9 +1,5 @@
 ## source from ~/.bashrc with:
-## [[ -r /path/to/bashrc.bash ]] && . /path/to/bashrc.bash
-
-export EDITOR=vim
-
-#eval $(keychain --eval --quiet id_rsa [...])
+## [[ -r /path/to/bash_prompt.bash ]] && . /path/to/bash_prompt.bash
 
 # setup prompt
 
@@ -28,12 +24,3 @@ if [ "$(type -t __git_ps1)" = function ]; then
 fi
 
 PS1="["$PS1"]\$ "
-
-## set window title to "somename" on debian/ubuntu, xterm/rxvt
-#case "$TERM" in
-#xterm*|rxvt*)
-#    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}somename: \w\a\]$PS1"
-#    ;;
-#*)
-#    ;;
-#esac
