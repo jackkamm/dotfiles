@@ -5,12 +5,12 @@ set -euo pipefail
         echo -e "\n[[ -r $1 ]] && . $1"
     }
 
-    print_include ~/.config/share/environment.sh >> ~/.bash_profile
-    print_include ~/.config/share/environment.sh >> ~/.zprofile
-    print_include ~/.config/share/environment.sh >> ~/.xprofile
+    print_include ~/.local/share/dotfiles/environment.sh >> ~/.bash_profile
+    print_include ~/.local/share/dotfiles/environment.sh >> ~/.zprofile
+    print_include ~/.local/share/dotfiles/environment.sh >> ~/.xprofile
 
-    print_include ~/.config/share/bash_prompt.bash >> ~/.bashrc
-    print_include ~/.config/share/zshrc.zsh >> ~/.zshrc
+    print_include ~/.local/share/dotfiles/bash_prompt.bash >> ~/.bashrc
+    print_include ~/.local/share/dotfiles/zshrc.zsh >> ~/.zshrc
     echo "Appended to .bash_profile, .zprofile, .xprofile, .bashrc, .zshrc."
 
     ./stow-home.bash common

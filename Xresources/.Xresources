@@ -1,6 +1,6 @@
-#include ".config/share/xresources.xresources"
-#include ".config/share/xresources.xterm"
-!#include ".config/share/xresources.urxvt"
+#include ".local/share/dotfiles/xresources.xresources"
+#include ".local/share/dotfiles/xresources.xterm"
+!#include ".local/share/dotfiles/xresources.urxvt"
 
 !URxvt.font: xft:Source Code Pro:size=12
 !!emacs.font: Source Code Pro-12
@@ -8,4 +8,4 @@
 !XTerm.vt100.faceName: DejaVu Sans Mono
 !XTerm.vt100.faceSize: 11
 
-#include ".config/share/xresources.zenburn"
+#include ".local/share/dotfiles/xresources.zenburn"

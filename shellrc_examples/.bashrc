@@ -8,7 +8,7 @@
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
-[[ -r ~/.config/share/bash_prompt.bash ]] && . ~/.config/share/bash_prompt.bash
+[[ -r ~/.local/share/dotfiles/bash_prompt.bash ]] && . ~/.local/share/dotfiles/bash_prompt.bash
 
 export EDITOR=vim
 

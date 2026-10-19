@@ -2,7 +2,7 @@
 # ~/.bash_profile
 #
 
-[[ -r ~/.config/share/environment.sh ]] && . ~/.config/share/environment.sh
+[[ -r ~/.local/share/dotfiles/environment.sh ]] && . ~/.local/share/dotfiles/environment.sh
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 

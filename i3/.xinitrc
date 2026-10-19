@@ -38,6 +38,6 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
-. $HOME/.config/share/xinitrc.sh
+. $HOME/.local/share/dotfiles/xinitrc.sh
 
 exec i3
