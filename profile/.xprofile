@@ -1,0 +1,4 @@
+# -*- sh -*-
+# https://wiki.archlinux.org/title/Xprofile
+
+[[ -r ~/.config/share/environment.sh ]] && . ~/.config/share/environment.sh
