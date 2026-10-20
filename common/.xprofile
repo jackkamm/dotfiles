@@ -1,4 +1,6 @@
 # -*- sh -*-
 # https://wiki.archlinux.org/title/Xprofile
+# Ensure that X sessions started with GDM/SDDM/etc have same
+# environment variables as systemd user sessions
 
 [[ -r ~/.local/share/dotfiles/environment.sh ]] && . ~/.local/share/dotfiles/environment.sh
