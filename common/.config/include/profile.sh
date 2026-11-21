@@ -1,18 +1,6 @@
-# add to .profile to source this file:
-# [[ -r /path/to/profile.sh ]] && . /path/to/profile.sh
-
-export EDITOR=vim
-
-# https://wiki.archlinux.org/index.php/wine#Unregister_existing_Wine_file_associations
-export WINEDLLOVERRIDES="winemenubuilder.exe=d"
-
-# https://faq.i3wm.org/question/3410/wm-shortcuts-ignored-in-virtual-machine.1.html
-export SPICE_NOGRAB=1
-
-#eval $(keychain --eval --quiet id_rsa [...])
-
-#export PATH=$HOME/miniconda3/bin:$PATH
-#[[ -r ~/miniconda3/etc/profile.d/conda.sh ]] && . ~/miniconda3/etc/profile.d/conda.sh
+# to source this file, do:
+# source_if_exists() { [ -r "$1" ] && . "$1"; }
+# source_if_exists /path/to/environment.sh
 
 ## use the same environment variables as systemd user units
 ## See also: man environment.d
@@ -30,6 +18,3 @@ set +a
 # this, give config files a higher priority,
 # e.g. 990-env.conf. Alternatively, mask the offending config file by
 # creating one with the same name, see man environment.d(5).
-
-# prevent rofi-pass using whoami as default value of "user"
-export ROFI_PASS_DEFAULT_USER=""

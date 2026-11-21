@@ -1,6 +1,10 @@
 ## source from ~/.bashrc with:
 ## [[ -r /path/to/bashrc.bash ]] && . /path/to/bashrc.bash
 
+export EDITOR=vim
+
+#eval $(keychain --eval --quiet id_rsa [...])
+
 # setup prompt
 
 BLACK="\[\e[30m\]"

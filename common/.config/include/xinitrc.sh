@@ -28,7 +28,15 @@ export QT_QPA_PLATFORMTHEME=gtk2
 ## https://www.linuxquestions.org/questions/linux-newbie-8/how-to-disable-middle-click-button-on-etps-2-elantech-touchpad-4175619712/
 #xinput set-button-map "SynPS/2 Synaptics TouchPad" 1 1 3 4 5 6 7
 
+
 # see libinput(4)
 # see also: https://wiki.archlinux.org/title/Mouse_acceleration
 xinput set-prop 'SINOWEALTH Game Mouse' 'libinput Accel Speed' -0.5
 xinput set-prop 'SINOWEALTH Game Mouse' 'libinput Accel Profile Enabled' 0 1
+
+
+# https://faq.i3wm.org/question/3410/wm-shortcuts-ignored-in-virtual-machine.1.html
+export SPICE_NOGRAB=1
+
+# prevent rofi-pass using whoami as default value of "user"
+export ROFI_PASS_DEFAULT_USER=""
